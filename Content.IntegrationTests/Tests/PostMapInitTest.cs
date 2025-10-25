@@ -203,7 +203,6 @@ namespace Content.IntegrationTests.Tests
             // if upstreaming take ours here and edit manually.
               "Amber",
               "Atlas",
-              "Aspid",          // Orion
               "Bagel",
               "Barratry",
               "Box",            // Not in pool
@@ -236,7 +235,6 @@ namespace Content.IntegrationTests.Tests
               "Train",          //Not in pool
               "Packed",
               "Reach",
-              "Rook",           // Orion
               "Saltern",
               "Serpentcrest",
               "Submarine"
