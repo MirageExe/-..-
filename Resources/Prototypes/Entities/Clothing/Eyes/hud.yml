@@ -107,7 +107,7 @@
   - type: ShowMindShieldIcons
   - type: ShowCriminalRecordIcons
   - type: ShowContrabandDetails
-  - type: ShowContrabandIcons
+#  - type: ShowContrabandIcons # Orion-Edit
 
 - type: entity
   id: ShowMedicalIcons
