@@ -18,7 +18,7 @@ poll-control-ends-in-days = Заканчивается через {$days} {$days
 }
 poll-control-ends-in-hours = Заканчивается через {$hours} {$hours ->
     [one] час
-часов
+    *[other] часов
 }
 poll-control-ended = Завершён
 poll-control-no-end-time = Время окончания не указано
