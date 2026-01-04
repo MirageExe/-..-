@@ -18,5 +18,7 @@ guide-entry-space-law-laws-5xx = Laws (5xx)
 guide-entry-space-law-laws-6xx = Laws (6xx)
 guide-entry-space-law-laws-procedures = Procedures
 
+guide-entry-amour-rules = Amour Server Rules
+
 guide-entry-antagonist = Antagonists
 guide-entry-cortical-borer = Cortical Borer
