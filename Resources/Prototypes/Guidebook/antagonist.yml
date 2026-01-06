@@ -52,6 +52,8 @@
   - Xenomorphs # WD - Xenomorphs
   - Wraith
   - Slasher # Goob content
+  - CorticalBorer # Amour edit
+  - Morph # Amour edit
 
 - type: guideEntry
   id: Traitors
@@ -87,3 +89,17 @@
   id: Thieves
   name: guide-entry-thieves
   text: "/ServerInfo/Guidebook/Antagonist/Thieves.xml"
+
+  # Amour edit start
+
+- type: guideEntry
+  id: CorticalBorer
+  name: guide-entry-antagonist-cortical-borer
+  text: "/ServerInfo/_Orion/Guidebook/Antagonist/CorticalBorer.xml"
+
+- type: guideEntry
+  id: Morph
+  name: guide-entry-antagonist-morph
+  text: "/ServerInfo/_Orion/Guidebook/Antagonist/Morph.xml"
+
+   # Amour edit end
