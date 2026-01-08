@@ -123,6 +123,7 @@
       components:
       - Gun
       - EnergySword
+      - Nuke # Amour
   - type: Instrument # imp
     allowPercussion: false
     handheld: false
