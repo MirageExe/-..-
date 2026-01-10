@@ -8,6 +8,10 @@
   },
   "states": [
     {
+      "name": "africanpigtails",
+      "directions": 4
+    },
+    {
       "name": "afropuffdouble",
       "directions": 4
     },
@@ -20,27 +24,7 @@
       "directions": 4
     },
     {
-      "name": "amazon",
-      "directions": 4
-    },
-    {
-      "name": "astolfo",
-      "directions": 4
-    },
-    {
-      "name": "baum",
-      "directions": 4
-    },
-    {
       "name": "beachwave",
-      "directions": 4
-    },
-    {
-      "name": "bluntbangs",
-      "directions": 4
-    },
-    {
-      "name": "bluntbangs_alt",
       "directions": 4
     },
     {
@@ -60,15 +44,7 @@
       "directions": 4
     },
     {
-      "name": "cotton",
-      "directions": 4
-    },
-    {
       "name": "curly",
-      "directions": 4
-    },
-    {
-      "name": "dave",
       "directions": 4
     },
     {
@@ -84,31 +60,11 @@
       "directions": 4
     },
     {
-      "name": "fluffy_short",
-      "directions": 4
-    },
-    {
-      "name": "fortuneteller",
-      "directions": 4
-    },
-    {
-      "name": "fortuneteller_alt",
-      "directions": 4
-    },
-    {
       "name": "froofylong",
       "directions": 4
     },
     {
-      "name": "geisha",
-      "directions": 4
-    },
-    {
       "name": "gentle21",
-      "directions": 4
-    },
-    {
-      "name": "glammetal",
       "directions": 4
     },
     {
@@ -148,15 +104,15 @@
       "directions": 4
     },
     {
+      "name": "hightight",
+      "directions": 4
+    },
+    {
       "name": "hyenamane",
       "directions": 4
     },
     {
       "name": "jessica",
-      "directions": 4
-    },
-    {
-      "name": "long5",
       "directions": 4
     },
     {
@@ -201,14 +157,6 @@
     },
     {
       "name": "quadcurls",
-      "directions": 4
-    },
-    {
-      "name": "sabitsuki",
-      "directions": 4
-    },
-    {
-      "name": "scully",
       "directions": 4
     },
     {
@@ -265,10 +213,6 @@
     },
     {
       "name": "victory",
-      "directions": 4
-    },
-    {
-      "name": "viper",
       "directions": 4
     },
     {
