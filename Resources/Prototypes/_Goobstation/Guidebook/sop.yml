@@ -1,1 +1,51 @@
-# Orion-Edit: Removed literally
+# Orion-Edit: Added back for compatibility
+
+- type: guideEntry
+  id: SpaceLaw
+  name: guide-entry-space-law
+  text: "/ServerInfo/Guidebook/Security/SpaceLaw.xml"
+
+- type: guideEntry
+  id: SOP
+  name: guide-entry-sop
+  text: "/ServerInfo/Guidebook/SOP/SOP.xml"
+
+- type: guideEntry
+  id: SOP-Security
+  name: guide-entry-sop-security
+  text: "/ServerInfo/Guidebook/SOP/Security.xml"
+
+- type: guideEntry
+  id: SOP-Security-Detective
+  name: guide-entry-sop-security-detective
+  text: "/ServerInfo/Guidebook/SOP/SecurityDetective.xml"
+
+- type: guideEntry
+  id: SOP-Security-Officer
+  name: guide-entry-sop-security-officer
+  text: "/ServerInfo/Guidebook/SOP/SecurityOfficer.xml"
+
+- type: guideEntry
+  id: SOP-Security-Warden
+  name: guide-entry-sop-security-warden
+  text: "/ServerInfo/Guidebook/SOP/SecurityWarden.xml"
+
+- type: guideEntry
+  id: SOP-Security-Cadet
+  name: guide-entry-sop-security-cadet
+  text: "/ServerInfo/Guidebook/SOP/SecurityCadet.xml"
+
+- type: guideEntry
+  id: SOP-Security-HeadOfSecurity
+  name: guide-entry-sop-security-hos
+  text: "/ServerInfo/Guidebook/SOP/SecurityHoS.xml"
+
+- type: guideEntry
+  id: SOP-Security-Brigmedic
+  name: guide-entry-sop-security-brigmedic
+  text: "/ServerInfo/Guidebook/SOP/SecurityBrigmedic.xml"
+
+- type: guideEntry
+  id: SOP-Alerts
+  name: guide-entry-sop-alerts
+  text: "/ServerInfo/Guidebook/SOP/Alerts.xml"

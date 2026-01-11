@@ -12,6 +12,12 @@
   - type: Sprite
     color: "#ffffffcc"
 
+- type: entity
+  parent: MobObserverAmour
+  id: MobObserverCkeyPlaceholder
+  components:
+  - type: Ghost
+
 - type: customGhost
   id: customPlaceholder
   category: personal
