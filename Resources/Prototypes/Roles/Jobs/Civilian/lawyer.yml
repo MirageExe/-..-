@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2022 EmoGarbage404 <98561806+EmoGarbage404@users.noreply.github.com>
+﻿# SPDX-FileCopyrightText: 2022 EmoGarbage404 <98561806+EmoGarbage404@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
 # SPDX-FileCopyrightText: 2022 Mervill <mervills.email@gmail.com>
 # SPDX-FileCopyrightText: 2022 Morb <14136326+Morb0@users.noreply.github.com>
@@ -72,7 +72,7 @@
   playTimeTracker: JobLawyer
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 9000 # 2.5 hrs
+      time: 4500 #1.25 hrs # Amour
   startingGear: LawyerGear
   icon: "JobIconLawyer"
   supervisors: job-supervisors-hop

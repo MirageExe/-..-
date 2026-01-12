@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
+﻿# SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2020 Bright <nsmoak10@yahoo.com>
 # SPDX-FileCopyrightText: 2020 Bright0 <55061890+Bright0@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2020 FL-OZ <58238103+FL-OZ@users.noreply.github.com>
@@ -141,19 +141,19 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 14400 # 4 hours
+      time: 7200 #2 hrs # Amour
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 14400 # 4 hours
+      time: 7200 #2 hrs # Amour
     - !type:DepartmentTimeRequirement
       department: Science
-      time: 14400 # 4 hours
+      time: 7200 #2 hrs # Amour
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 21600 # 6 hours
+      time: 10800 #3 hrs # Amour
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 28000 # 8 hours
+      time: 14000 #3.89 hrs # Amour
       #any MRP using our code might eventually want to use it
     # - !type:SaturationRequirement # MisandryBox - no neon hair on captain
     #   hairColorSaturation: 0.30

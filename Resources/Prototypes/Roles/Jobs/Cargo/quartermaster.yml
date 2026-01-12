@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2020 Peter Wedder <burneddi@gmail.com>
+﻿# SPDX-FileCopyrightText: 2020 Peter Wedder <burneddi@gmail.com>
 # SPDX-FileCopyrightText: 2021 20kdc <asdd2808@gmail.com>
 # SPDX-FileCopyrightText: 2021 Paul Ritter <ritter.paul1@gmail.com>
 # SPDX-FileCopyrightText: 2021 Paul Ritter <ritter.paul1@googlemail.com>
@@ -132,13 +132,13 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobCargoTechnician
-      time: 18000 #5 hrs
+      time: 9000 #2.50 hrs # Amour
     - !type:RoleTimeRequirement
       role: JobSalvageSpecialist
-      time: 9000 #2.5 hrs
+      time: 4500 #1.25 hrs # Amour
     - !type:DepartmentTimeRequirement
       department: Cargo
-      time: 36000 #10 hours
+      time: 18000 #5 hrs # Amour
   weight: 10
   startingGear: QuartermasterGear
   icon: "JobIconQuarterMaster"

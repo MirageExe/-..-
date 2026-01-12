@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2022 Emisse <99158783+Emisse@users.noreply.github.com>
+﻿# SPDX-FileCopyrightText: 2022 Emisse <99158783+Emisse@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
 # SPDX-FileCopyrightText: 2022 Morber <14136326+Morb0@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2022 Paul Ritter <ritter.paul1@googlemail.com>
@@ -67,7 +67,7 @@
   requirements:
   - !type:DepartmentTimeRequirement
     department: Engineering
-    time: 9000 #2.5 hrs
+    time: 4500 #1.25 hrs # Amour
   startingGear: AtmosphericTechnicianGear
   icon: "JobIconAtmosphericTechnician"
   supervisors: job-supervisors-ce

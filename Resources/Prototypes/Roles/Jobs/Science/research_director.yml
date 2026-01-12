@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
+﻿# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
 # SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2020 Bright <nsmoak10@yahoo.com>
 # SPDX-FileCopyrightText: 2020 Bright0 <55061890+Bright0@users.noreply.github.com>
@@ -139,10 +139,10 @@
   requirements:
   - !type:RoleTimeRequirement
     role: JobScientist
-    time: 21600 #6 hrs
+    time: 10800 #3 hrs # Amour
   - !type:DepartmentTimeRequirement
     department: Science
-    time: 36000 #10 hrs
+    time: 18000 #5 hrs # Amour
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"

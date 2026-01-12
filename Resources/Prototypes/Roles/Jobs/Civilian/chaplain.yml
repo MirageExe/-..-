@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
+﻿# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
 # SPDX-FileCopyrightText: 2020 Peter Wedder <burneddi@gmail.com>
 # SPDX-FileCopyrightText: 2020 Swept <sweptwastaken@protonmail.com>
 # SPDX-FileCopyrightText: 2021 Elijahrane <60792108+Elijahrane@users.noreply.github.com>
@@ -70,7 +70,7 @@
   playTimeTracker: JobChaplain
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 18000 # 15 hours
+      time: 9000 #2.50 hrs # Amour
   startingGear: ChaplainGear
   icon: "JobIconChaplain"
   supervisors: job-supervisors-hop

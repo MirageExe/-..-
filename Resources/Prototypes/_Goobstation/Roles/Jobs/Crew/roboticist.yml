@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: Roboticist
   name: job-name-roboticist
   description: job-description-roboticist
@@ -6,7 +6,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Science
-      time: 14400 #4 hrs
+      time: 7200 #2 hrs # Amour
   startingGear: RoboticistGear
   icon: "JobIconRoboticist"
   supervisors: job-supervisors-rd

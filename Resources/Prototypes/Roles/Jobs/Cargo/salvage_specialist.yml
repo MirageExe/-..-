@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
+﻿# SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
 # SPDX-FileCopyrightText: 2022 Kara D <lunarautomaton6@gmail.com>
 # SPDX-FileCopyrightText: 2022 Lamrr <96937466+Lamrr@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2022 Morb <14136326+Morb0@users.noreply.github.com>
@@ -76,7 +76,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Cargo
-      time: 9000 # 2.5 hrs
+      time: 4500 #1.25 hrs # Amour
   icon: "JobIconShaftMiner"
   startingGear: SalvageSpecialistGear
 #  guides: # goobstation | Orion-Edit: Removed because dont have this SOP

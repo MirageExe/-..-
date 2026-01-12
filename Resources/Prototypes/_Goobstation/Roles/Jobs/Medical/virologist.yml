@@ -1,4 +1,4 @@
-- type: job
+﻿- type: job
   id: Virologist
   name: job-name-virologist
   description: job-description-virologist
@@ -6,7 +6,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 14400 #4 hrs
+      time: 7200 #2 hrs # Amour
   startingGear: VirologistGear
   icon: "JobIconVirologist"
   supervisors: job-supervisors-cmo

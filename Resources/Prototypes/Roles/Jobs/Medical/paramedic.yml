@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
+﻿# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
 # SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2020 Bright <nsmoak10@yahoo.com>
 # SPDX-FileCopyrightText: 2020 Bright0 <55061890+Bright0@users.noreply.github.com>
@@ -83,7 +83,7 @@
   requirements:
   - !type:DepartmentTimeRequirement
     department: Medical
-    time: 9000 #2.5 hrs
+    time: 4500 #1.25 hrs # Amour
   startingGear: ParamedicGear
   icon: "JobIconParamedic"
   supervisors: job-supervisors-cmo

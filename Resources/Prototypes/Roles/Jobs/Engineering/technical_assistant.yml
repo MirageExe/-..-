@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2022 Jukereise <altjupiterfive@gmail.com>
+﻿# SPDX-FileCopyrightText: 2022 Jukereise <altjupiterfive@gmail.com>
 # SPDX-FileCopyrightText: 2022 Kara <lunarautomaton6@gmail.com>
 # SPDX-FileCopyrightText: 2022 Moony <moonheart08@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2022 Morber <14136326+Morb0@users.noreply.github.com>
@@ -64,10 +64,10 @@
   playTimeTracker: JobTechnicalAssistant
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 7200 # 2 hrs
+      time: 3600 #1 hrs # Amour
     - !type:DepartmentTimeRequirement
       department: Engineering
-      time: 36000 #10 hrs
+      time: 18000 #5 hrs # Amour
       inverted: true # stop playing intern if you're good at engineering!
   startingGear: TechnicalAssistantGear
   icon: "JobIconTechnicalAssistant"

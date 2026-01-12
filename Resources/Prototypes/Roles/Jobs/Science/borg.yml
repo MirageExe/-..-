@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
+﻿# SPDX-FileCopyrightText: 2023 Nemanja <98561806+EmoGarbage404@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 BramvanZijp <56019239+BramvanZijp@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 Ed <96445749+TheShuEd@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 Emisse <99158783+Emisse@users.noreply.github.com>
@@ -37,7 +37,7 @@
   requirements:
   - !type:RoleTimeRequirement
     role: JobBorg
-    time: 18000  # 5 hrs
+    time: 9000 #2.50 hrs # Amour
   canBeAntag: false
   goobcoins: 40 #Goob content
   weight: 10 # Goob Edit
@@ -54,7 +54,7 @@
   playTimeTracker: JobBorg
   requirements:
     - !type:OverallPlaytimeRequirement
-      time: 36000 # 10 hrs
+      time: 18000 #5 hrs # Amour
   canBeAntag: false
   goobcoins: 20 #Goob content
   icon: JobIconBorg

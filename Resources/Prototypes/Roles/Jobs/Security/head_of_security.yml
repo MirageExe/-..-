@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
+﻿# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
 # SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2020 Bright <nsmoak10@yahoo.com>
 # SPDX-FileCopyrightText: 2020 Bright0 <55061890+Bright0@users.noreply.github.com>
@@ -141,16 +141,16 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobWarden
-      time: 18000 #5 hr
+      time: 9000 #2.50 hrs # Amour
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
-      time: 36000 #10 hrs
+      time: 18000 #5 hrs # Amour
     - !type:RoleTimeRequirement
       role: JobDetective
-      time: 3600 #1 hrs
+      time: 1800 #30 min # Amour
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 36000 # 10 hrs
+      time: 18000 #5 hrs # Amour
   #  - !type:StyleRequirement
   #    styles:
   #    - HumanHairFloorlengthBedhead

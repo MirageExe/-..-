@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
+﻿# SPDX-FileCopyrightText: 2020 20kdc <asdd2808@gmail.com>
 # SPDX-FileCopyrightText: 2020 AJCM-git <60196617+AJCM-git@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2020 Bright <nsmoak10@yahoo.com>
 # SPDX-FileCopyrightText: 2020 Bright0 <55061890+Bright0@users.noreply.github.com>
@@ -138,13 +138,13 @@
   requirements:
     - !type:RoleTimeRequirement
       role: JobChemist
-      time: 18000 #5 hrs
+      time: 9000 #2.50 hrs # Amour
     - !type:RoleTimeRequirement
       role: JobMedicalDoctor
-      time: 28000 #8 hrs
+      time: 14000 #3.89 hrs # Amour
     - !type:DepartmentTimeRequirement
       department: Medical
-      time: 36000 #10 hrs
+      time: 18000 #5 hrs # Amour
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"
   supervisors: job-supervisors-captain

@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2024 Alzore <140123969+Blackern5000@users.noreply.github.com>
+﻿# SPDX-FileCopyrightText: 2024 Alzore <140123969+Blackern5000@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 Aviu00 <93730715+Aviu00@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 BombasterDS <115770678+BombasterDS@users.noreply.github.com>
 # SPDX-FileCopyrightText: 2024 Brandon Hu <103440971+Brandon-Huu@users.noreply.github.com>
@@ -101,7 +101,7 @@
   requirements:
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 180000  #50 hours
+      time: 90000 #25 hrs # Amour
     - !type:AgeRequirement
       requiredAge: 21
   weight: 20
