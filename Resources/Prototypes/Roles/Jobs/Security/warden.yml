@@ -152,8 +152,6 @@
   guides: # goobstation
   - SpaceLaw
   # Orion-Edit-Start
-  - SOP-Security-Warden
-  - SOP-Security
   # Orion-Edit-End
   - KravMaga
   goobcoins: 35 #Goob content

@@ -1,1 +1,7 @@
-# Orion-Edit: Removed literally
+
+- type: guideEntry
+  id: SpaceLaw
+  name: guide-entry-space-law
+  text: "/ServerInfo/Guidebook/Security/SpaceLaw.xml"
+
+# Amour remove SOP
