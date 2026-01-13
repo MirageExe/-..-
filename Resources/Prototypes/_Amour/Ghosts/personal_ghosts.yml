@@ -771,13 +771,13 @@
     color: "#ffffffe5"
     scale: 0.9, 0.9
 
-# Krokozyabra
+# Zyabr (Krokozyabra)
 - type: customGhost
   parent: CkeyPersonal
   id: krokozyabra-ghost
   restrictions:
   - !type:CkeyRestriction
-    ckey: [ Krokozyabra ]
+    ckey: [ Zyabr ]
   entity: MobObserver-krokozyabra-ghost
 - type: entity
   parent: MobObserverAmour
