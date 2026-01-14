@@ -384,7 +384,7 @@ namespace Content.Server.RoundEnd
 
         private void AfterEndRoundRestart()
         {
-            IsForcedCall = false;
+            IsForcedCall = false; // Amour
             if (_gameTicker.RunLevel != GameRunLevel.PostRound) return;
             Reset();
             _gameTicker.RestartRound();
