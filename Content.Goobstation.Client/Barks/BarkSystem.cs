@@ -1,4 +1,5 @@
 using Content.Goobstation.Common.Barks;
+using Content.Shared._Amour;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
@@ -23,12 +24,28 @@ public sealed class BarkSystem : EntitySystem
 
     private readonly List<ActiveBark> _activeBarks = new();
 
+    private bool _barksEnabled = true; // Amour
+
     public override void Initialize()
     {
         base.Initialize();
+        _cfg.OnValueChanged(WhiteCVars.VoiceType, OnVoiceTypeChanged, true); // Amour 
         SubscribeNetworkEvent<PlayBarkEvent>(OnPlayBark);
         SubscribeLocalEvent<PreviewBarkEvent>(OnPreviewBark);
     }
+
+    // Amour begin
+    public override void Shutdown()
+    {
+        base.Shutdown();
+        _cfg.UnsubValueChanged(WhiteCVars.VoiceType, OnVoiceTypeChanged);
+    }
+
+    private void OnVoiceTypeChanged(CharacterVoiceType voiceType)
+    {
+        _barksEnabled = voiceType == CharacterVoiceType.Barks;
+    }
+    // Amour end
 
     public void OnPreviewBark(PreviewBarkEvent ev)
     {
@@ -46,6 +63,9 @@ public sealed class BarkSystem : EntitySystem
 
     private void OnPlayBark(PlayBarkEvent ev)
     {
+        if (!_barksEnabled) // Amour
+            return;
+
         var sourceEntity = GetEntity(ev.SourceUid);
         if (!TryComp<SpeechSynthesisComponent>(sourceEntity, out var comp)
             || comp.VoicePrototypeId is null

@@ -1,0 +1,288 @@
+﻿# TTS Voice Names - Russian Localization
+
+# Media
+tts-voice-name-papich = Папич
+tts-voice-name-bebey = Бэбэй
+tts-voice-name-puchkow = Дмитрий Пучков
+tts-voice-name-moriarti = Мориарти
+tts-voice-name-charlotte = Шарлотта
+tts-voice-name-planya = Планя
+tts-voice-name-mana = Мана
+tts-voice-name-amina = Амина
+tts-voice-name-biden = Джо Байден
+tts-voice-name-obama = Барак Обама
+tts-voice-name-trump = Дональд Трамп
+tts-voice-name-dobakin = Добакин
+tts-voice-name-xrenoid = Хреноид
+tts-voice-name-playboyztv = PlayBoyzTV
+
+# Half-Life 2
+tts-voice-name-briman = Уоллес Брин
+tts-voice-name-father-grigori = Отец Григорий
+tts-voice-name-kleiner = Доктор Кляйнер
+tts-voice-name-mossman = Джудит Моссман
+tts-voice-name-vance = Илай Вэнс
+tts-voice-name-alyx = Аликс Вэнс
+tts-voice-name-gman = G-Man
+tts-voice-name-barni = Барни Калхун
+
+# Fate
+tts-voice-name-neco = Неко-Арк
+tts-voice-name-neco-arc-2 = Неко-Арк 2
+tts-voice-name-angry-neco-arc = Злая Неко-Арк
+
+# Minecraft
+tts-voice-name-villager = Житель
+
+# Sponge Bob
+tts-voice-name-squidward = Сквидвард
+
+# Fallout 3
+tts-voice-name-sentrybot = SentryBot
+tts-voice-name-moira-brown = Мойра Браун
+tts-voice-name-robert-maccready = Робер МакКриди
+tts-voice-name-threedog = Тридогнайт
+tts-voice-name-threedog-radio = Тридогнайт Радио
+tts-voice-name-mister-handy = Мистер Помощник
+tts-voice-name-mister-gutsy = Мистер Храбрец
+tts-voice-name-jericho = Джерико
+tts-voice-name-elder-lyons = Старейшина Лайонс
+tts-voice-name-sarah-lyons = Сара Лайонс
+tts-voice-name-colin-moriarty = Колин Мориарти
+tts-voice-name-john-henry-eden = Джон Генри Эдем
+tts-voice-name-super-mutant = Супер-Мутант
+
+# Tiny Bunny
+tts-voice-name-polina = Полина Морозова
+tts-voice-name-romka = Рома Пятифанов
+tts-voice-name-boris-petrov = Борис Петров
+tts-voice-name-karina-petrova = Карина Петрова
+tts-voice-name-kate-smirnova = Катя Смирнова
+tts-voice-name-semen-baburin = Семён Бабурин
+tts-voice-name-tihonov = Лейтенант Тихонов
+
+# TES 5 Skyrim
+tts-voice-name-cicero = Цицерон
+tts-voice-name-sheogorath = Шеогорат
+tts-voice-name-kodlak-whitemane = Кодлак Белая Грива
+tts-voice-name-khajiit = Каджит
+tts-voice-name-elenwen = Эленвен
+tts-voice-name-emperor = Тит Мид II
+tts-voice-name-guard = Стражник
+tts-voice-name-hagraven = Ворожея
+tts-voice-name-hermaeus-mora = Хермеус Мора
+tts-voice-name-nord = Норд
+tts-voice-name-ulfric = Ульфрик Буревестник
+tts-voice-name-astrid = Астрид
+tts-voice-name-maven = Мавен Чёрный Вереск
+tts-voice-name-nazir = Назир
+tts-voice-name-female-commander = Женщина командир
+tts-voice-name-lord-harkon = Лорд Харкон
+tts-voice-name-serana = Серана
+
+# Portal 2
+tts-voice-name-glados = GLaDOS
+tts-voice-name-adventure-core = Модуль Приключений
+tts-voice-name-fact-core = Модуль Фактов
+tts-voice-name-space-core = Модуль Космоса
+tts-voice-name-turret = Турель
+
+# The Witcher 3
+tts-voice-name-geralt = Геральт из Ривии
+tts-voice-name-cirilla = Цирилла
+tts-voice-name-cerys = Керис ан Крайт
+tts-voice-name-lambert = Ламберт
+tts-voice-name-triss = Трисс
+tts-voice-name-kovir-nobleman = Ковир Ноблеман
+tts-voice-name-zoltan-chivay = Золтан Хивай
+tts-voice-name-vesemir = Весемир
+tts-voice-name-guillaume = Гильом де Лонфаль
+tts-voice-name-philippa = Филиппа Эйльхарт
+tts-voice-name-ewald = Эвальд Борсоди
+tts-voice-name-dandelion = Лютик
+tts-voice-name-shani = Шани
+
+# League of Legends
+tts-voice-name-azir = Азир
+tts-voice-name-ekko = Экко
+tts-voice-name-twitch = Твич
+tts-voice-name-ziggs = Зиггс
+tts-voice-name-caitlyn = Кэйтлин
+
+# Warcraft 3
+tts-voice-name-arthas = Артас Менетил
+tts-voice-name-illidan = Иллидан Ярость Бури
+tts-voice-name-rexxar = Рексар
+tts-voice-name-voljin = Вол'джин
+
+# S.T.A.L.K.E.R.
+tts-voice-name-bandit = Бандит
+tts-voice-name-forester = Лесник
+tts-voice-name-sidorovich = Сидорович
+tts-voice-name-strelok = Стрелок
+
+# Overwatch
+tts-voice-name-tracer = Трэйсер
+
+# Team Fortress 2
+tts-voice-name-soldier = Солдат
+tts-voice-name-engineer = Инженер
+tts-voice-name-heavy = Хэви
+tts-voice-name-medic = Медик
+tts-voice-name-demoman = Подрывник
+tts-voice-name-sniper = Снайпер
+tts-voice-name-spy = Шпион
+
+# The Punisher
+tts-voice-name-punisher = Каратель
+
+# Cyberpunk 2077
+tts-voice-name-johnny = Джонни Сильверхенд
+tts-voice-name-panam = Панам Палмер
+tts-voice-name-v-female = Ви
+tts-voice-name-judy = Джуди Альварес
+tts-voice-name-mitch = Митч Андерсон
+tts-voice-name-skippy = Скиппи
+tts-voice-name-jackie = Джеки Уэллс
+tts-voice-name-maiko = Майко Маэда
+tts-voice-name-brendan = Брендан
+tts-voice-name-nancy-hartley = Нэнси Хартли
+tts-voice-name-oswald-forrest = Освальд Форрест
+tts-voice-name-steve = Стив Санчес
+
+# Fallout 2
+tts-voice-name-dornan = Сержант Дорнан
+tts-voice-name-officer-enclave = Офицер Анклава
+tts-voice-name-richardson = Дик Ричардсон
+tts-voice-name-butch = Бутч Харрис
+tts-voice-name-marcus = Маркус
+tts-voice-name-sulik = Сулик
+tts-voice-name-myron = Майрон
+
+# Dungeons 3
+tts-voice-name-good-thalya = Добрая Талия
+tts-voice-name-evil-thalya = Злая Талия
+tts-voice-name-narrator-d3 = Рассказчик
+
+# Postal 2
+tts-voice-name-dude = Чувак
+
+# Hearthstone
+tts-voice-name-anduin = Андуин Ринн
+tts-voice-name-brukan = Бру'кан
+tts-voice-name-garrosh = Гаррош Адский Крик
+tts-voice-name-jaina = Джайна Праудмур
+tts-voice-name-uther = Утер Светоносный
+
+# StarCraft 2
+tts-voice-name-adjutant = Адъютант
+tts-voice-name-hanson = Ариэль Хэнсон
+tts-voice-name-bralik = Бралик
+tts-voice-name-horner = Мэтт Хорнер
+tts-voice-name-tosh = Габриэль Тош
+tts-voice-name-tychus = Тайкус Финдли
+
+# Hogwarts Legacy
+tts-voice-name-amit-kakkar = Амит Таккар
+tts-voice-name-eleazar-fig = Элеазар Фиг
+tts-voice-name-ernie-lark = Эрни Ларк
+tts-voice-name-ignatia = Игнатия Уайлдсмит
+tts-voice-name-lodgok = Лодгок
+tts-voice-name-phineas-black = Финеас Найджелус Блэк
+tts-voice-name-ranrak = Ранрок
+tts-voice-name-victor-rookwood = Виктор Руквуд
+tts-voice-name-zenobia-noke = Зенобия Ноук
+tts-voice-name-gladwin-moon = Глэдвин Мун
+tts-voice-name-matilda-weasley = Матильда Уизли
+tts-voice-name-natsai-onai = Натсай Онай
+tts-voice-name-ominis-gaunt = Оминис Мракс
+tts-voice-name-poppy-sweeting = Поппи Добринг
+tts-voice-name-goblin-c = Гоблин В
+tts-voice-name-dinah-hecat = Дина Гекат
+tts-voice-name-aesop-sharp = Эзоп Шарп
+tts-voice-name-abraham-ronen = Абрахам Ронен
+tts-voice-name-samantha-dale = Саманта Дейл
+tts-voice-name-sirona-ryan = Сирона Райан
+tts-voice-name-sophronia-franklin = Софрония Франклин
+tts-voice-name-everett-clopton = Эверетт Клоптон
+tts-voice-name-goblin-b = Гоблин Б
+tts-voice-name-sanctuary-house-elf = Домовой эльф из святилища
+
+# Dota 2
+tts-voice-name-abaddon = Abaddon
+tts-voice-name-alchemist = Alchemist
+tts-voice-name-anti-mage = Anti-Mage
+tts-voice-name-arc-warden = Arc Warden
+tts-voice-name-batrider = Batrider
+tts-voice-name-bloodseeker = Bloodseeker
+tts-voice-name-bounty-hunter = Bounty Hunter
+tts-voice-name-bristleback = Bristleback
+tts-voice-name-broodmother = Broodmother
+tts-voice-name-centaur-warrunner = Centaur Warrunner
+tts-voice-name-clinkz = Clinkz
+tts-voice-name-clockwerk = Clockwerk
+tts-voice-name-crystal-maiden = Crystal Maiden
+tts-voice-name-dazzle = Dazzle
+tts-voice-name-disruptor = Disruptor
+tts-voice-name-doom = Doom
+tts-voice-name-dragon-knight = Dragon Knight
+tts-voice-name-dragon-knight-dragon = Dragon Knight Dragon
+tts-voice-name-drow-ranger = Drow Ranger
+tts-voice-name-earthshaker = Earthshaker
+tts-voice-name-ember-spirit = Ember Spirit
+tts-voice-name-enigma = Enigma
+tts-voice-name-gyrocopter = Gyrocopter
+tts-voice-name-huskar = Huskar
+tts-voice-name-invoker = Invoker
+tts-voice-name-juggernaut = Juggernaut
+tts-voice-name-keeper-of-the-light = Keeper Of The Light
+tts-voice-name-kunkka = Kunkka
+tts-voice-name-legion-commander-demon = Legion Commander Demon
+tts-voice-name-legion-commander = Legion Commander
+tts-voice-name-lich = Lich
+tts-voice-name-lina = Lina
+tts-voice-name-luna = Luna
+tts-voice-name-lycan = Lycan
+tts-voice-name-lycan-wolf = Lycan Wolf
+tts-voice-name-meepo = Meepo
+tts-voice-name-mirana = Mirana
+tts-voice-name-monkey-king-crown = Monkey King Crown
+tts-voice-name-monkey-king = Monkey King
+tts-voice-name-necrophos = Necrophos
+tts-voice-name-nyx-assassin = Nyx Assassin
+tts-voice-name-omniknight = Omniknight
+tts-voice-name-outworld-destroyer = Outworld Destroyer
+tts-voice-name-phantom-assassin-arcana = Phantom Assassin Arcana
+tts-voice-name-phantom-assassin = Phantom Assassin
+tts-voice-name-phantom-lancer = Phantom Lancer
+tts-voice-name-pudge = Pudge
+tts-voice-name-queen-of-pain = Queen Of Pain
+tts-voice-name-razor = Razor
+tts-voice-name-riki = Riki
+tts-voice-name-rubick = Rubick
+tts-voice-name-sand-king = Sand King
+tts-voice-name-shadow-fiend = Shadow Fiend
+tts-voice-name-shadow-shaman = Shadow Shaman
+tts-voice-name-skywrath-mage = Skywrath Mage
+tts-voice-name-slardar = Slardar
+tts-voice-name-slark = Slark
+tts-voice-name-spirit-breaker = Spirit Breaker
+tts-voice-name-storm-spirit = Storm Spirit
+tts-voice-name-sven = Sven
+tts-voice-name-templar-assassin = Templar Assassin
+tts-voice-name-tidehunter = Tidehunter
+tts-voice-name-treant-protector = Treant Protector
+tts-voice-name-underlord = Underlord
+tts-voice-name-ursa = Ursa
+tts-voice-name-windranger = Windranger
+tts-voice-name-winter-wyvern = Winter Wyvern
+tts-voice-name-witch-doctor = Witch Doctor
+tts-voice-name-wraith-king = Wraith King
+tts-voice-name-zeus = Zeus
+
+# MiSide
+tts-voice-name-mita = Мита
+tts-voice-name-mita-dream = Сонная Мита
+tts-voice-name-mita-ghost = Мита Призрак
+tts-voice-name-mita-kind = Добрая Мита
+tts-voice-name-mita-shorthairs = Коротковолосая Мита

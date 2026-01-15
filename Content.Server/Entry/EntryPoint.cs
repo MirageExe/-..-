@@ -136,6 +136,7 @@
 
 using Content.Server._Goobstation.Antag;
 using Content.Server.Acz;
+using Content.Server._Amour.TTS;
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
@@ -185,6 +186,7 @@ namespace Content.Server.Entry
         private IWatchlistWebhookManager _watchlistWebhookManager = default!;
         private IConnectionManager? _connectionManager;
         private LastRolledAntagManager? _lastAntagManager; // Goobstation
+        private TTSManager _ttsManager = default!; // Amour
 
         /// <inheritdoc />
         public override void Init()
@@ -233,6 +235,7 @@ namespace Content.Server.Entry
                 _sysMan = IoCManager.Resolve<IEntitySystemManager>();
                 _dbManager = IoCManager.Resolve<IServerDbManager>();
                 _watchlistWebhookManager = IoCManager.Resolve<IWatchlistWebhookManager>();
+                _ttsManager = IoCManager.Resolve<TTSManager>(); // Amour
 
                 logManager.GetSawmill("Storage").Level = LogLevel.Info;
                 logManager.GetSawmill("db.ef").Level = LogLevel.Info;
@@ -248,6 +251,7 @@ namespace Content.Server.Entry
                 IoCManager.Resolve<ServerApi>().Initialize();
 
                 _voteManager.Initialize();
+            _ttsManager.Initialize(); // WD EDIT TTS
                 _updateManager.Initialize();
                 _playTimeTracking.Initialize();
                 _watchlistWebhookManager.Initialize();

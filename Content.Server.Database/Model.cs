@@ -642,6 +642,7 @@ namespace Content.Server.Database
     {
         public int Id { get; set; }
         public int Slot { get; set; }
+    public string Voice { get; set; } = ""; // WD EDIT TTS
         [Column("char_name")] public string CharacterName { get; set; } = null!;
         public string FlavorText { get; set; } = null!;
         // Orion-Start

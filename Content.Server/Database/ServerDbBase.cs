@@ -406,6 +406,7 @@ namespace Content.Server.Database
             }
 
             var barkVoice = profile.BarkVoice ?? SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Goob Station - Barks
+            var voice = string.IsNullOrEmpty(profile.Voice) ? "Papich" : profile.Voice; // Amour - TTS
 
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
@@ -446,7 +447,8 @@ namespace Content.Server.Database
                 antags.ToHashSet(),
                 traits.ToHashSet(),
                 loadouts,
-                barkVoice // Goob Station - Barks
+                barkVoice, // Goob Station - Barks
+                voice // Amour - TTS
             );
         }
 
@@ -514,6 +516,7 @@ namespace Content.Server.Database
             );
 
             profile.BarkVoice = humanoid.BarkVoice; // Goob Station - Barks
+            profile.Voice = humanoid.Voice; // Amour - TTS
 
             profile.Loadouts.Clear();
 

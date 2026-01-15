@@ -54,6 +54,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking;
+using Content.Shared._Amour.TTS;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Preferences.Loadouts;
@@ -165,6 +166,9 @@ namespace Content.Shared.Preferences
         [DataField] // Goob Station - Barks
         public ProtoId<BarkPrototype> BarkVoice { get; set; } = SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Goob Station - Barks
 
+        [DataField] // Amour - TTS
+        public ProtoId<TTSVoicePrototype> Voice { get; set; } = "Papich"; // Amour - TTS
+
         [DataField]
         public int Age { get; set; } = 18;
 
@@ -256,7 +260,8 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts,
-            ProtoId<BarkPrototype> barkVoice) // Goob Station - Barks
+            ProtoId<BarkPrototype> barkVoice, // Goob Station - Barks
+            ProtoId<TTSVoicePrototype> voice) // Amour - TTS
         {
             Name = name;
             FlavorText = flavortext;
@@ -288,6 +293,7 @@ namespace Content.Shared.Preferences
             _traitPreferences = traitPreferences;
             _loadouts = loadouts;
             BarkVoice = barkVoice; // Goob Station - Barks
+            Voice = voice; // Amour - TTS
 
             var hasHighPrority = false;
             foreach (var (key, value) in _jobPriorities)
@@ -335,7 +341,8 @@ namespace Content.Shared.Preferences
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
                 new Dictionary<string, RoleLoadout>(other.Loadouts),
-                other.BarkVoice) // Goob Station - Barks
+                other.BarkVoice, // Goob Station - Barks
+                other.Voice) // Amour - TTS
         {
         }
 
@@ -549,6 +556,13 @@ namespace Content.Shared.Preferences
         }
         // Goob Station - Barks End
 
+        // Amour - TTS Start
+        public HumanoidCharacterProfile WithVoice(TTSVoicePrototype voice)
+        {
+            return new(this) { Voice = voice };
+        }
+        // Amour - TTS End
+
         // Orion-Start
         public HumanoidCharacterProfile WithUplinkPreference(UplinkPreference uplinkPreference)
         {
@@ -718,6 +732,7 @@ namespace Content.Shared.Preferences
             if (Height != other.Height) return false; // Goobstation: port EE height/width sliders
             if (Width != other.Width) return false; // Goobstation: port EE height/width sliders
             if (BarkVoice != other.BarkVoice) return false; // Goob Station - Barks
+            if (Voice != other.Voice) return false; // Amour - TTS
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
             if (UplinkPreference != other.UplinkPreference) return false; // Orion
@@ -1150,6 +1165,7 @@ namespace Content.Shared.Preferences
             hashCode.Add((int) Gender);
             hashCode.Add(Appearance);
             hashCode.Add(BarkVoice); // Goob Station - Barks
+            hashCode.Add(Voice); // Amour - TTS
             hashCode.Add((int) SpawnPriority);
             hashCode.Add((int) PreferenceUnavailable);
             return hashCode.ToHashCode();

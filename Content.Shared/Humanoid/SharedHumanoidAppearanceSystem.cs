@@ -35,6 +35,7 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using Content.Shared.Examine;
+using Content.Shared._Amour.TTS;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared._Shitmed.Humanoid.Events; // Shitmed Change
 using Content.Shared.Humanoid.Prototypes;
@@ -565,6 +566,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         EnsureDefaultMarkings(uid, humanoid);
         SetBarkVoice(uid, profile.BarkVoice, humanoid); // Goob Station - Barks
+        SetTTSVoice(uid, profile.Voice); // Amour - TTS
 
         humanoid.Gender = profile.Gender;
         if (TryComp<GrammarComponent>(uid, out var grammar))
@@ -655,6 +657,23 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         if (sync)
             Dirty(uid, humanoid);
     }
+
+    // Amour - TTS Start
+    #region Amour - TTS
+    public void SetTTSVoice(EntityUid uid, string? voiceId)
+    {
+        if (string.IsNullOrEmpty(voiceId))
+            voiceId = "Papich";
+
+        if (!_proto.HasIndex<TTSVoicePrototype>(voiceId))
+            voiceId = "Papich";
+
+        EnsureComp<TTSComponent>(uid, out var comp);
+        comp.VoicePrototypeId = voiceId;
+        Dirty(uid, comp);
+    }
+    #endregion
+    // Amour - TTS End
 
     //  Goob Station - Barks Start
     #region Goob - Barks

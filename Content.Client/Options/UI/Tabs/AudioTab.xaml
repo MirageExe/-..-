@@ -32,12 +32,18 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                 <ui:OptionSlider Name="SliderVolumeLobby" Title="{Loc 'ui-options-lobby-volume'}" />
                 <ui:OptionSlider Name="SliderVolumeInterface" Title="{Loc 'ui-options-interface-volume'}" />
                 <ui:OptionSlider Name="SliderVolumeBarks" Title="{Loc 'ui-options-barks-volume'}" /><!-- Goob Station - Barks -->
+                <ui:OptionSlider Name="SliderVolumeTTS" Title="{Loc 'ui-options-tts-volume'}" /><!-- Amour - TTS -->
                 <ui:OptionSlider Name="SliderMaxAmbienceSounds" Title="{Loc 'ui-options-ambience-max-sounds'}"
                                  Margin="0 0 0 8" />
                 <!-- Orion-Start -->
                 <CheckBox Name="CombatModeSoundCheckBox" Text="{Loc 'ui-options-combat-mode-sound'}" />
                 <!-- Orion-End -->
                 <ui:OptionSlider Name="SliderHighlightVolume" Title="{Loc 'ui-options-highlight-volume'}" /> <!-- Goobstation - Highlight chat Ping/Audio! -->
+                <!-- Amour - Voice Type Selector -->
+                <BoxContainer Orientation="Horizontal" Margin="0 8 0 8">
+                    <Label Text="{Loc 'ui-options-voice-type'}" HorizontalExpand="True" />
+                    <OptionButton Name="VoiceTypeSelector" MinSize="150 0" />
+                </BoxContainer>
                 <CheckBox Name="LobbyMusicCheckBox" Text="{Loc 'ui-options-lobby-music'}" />
                 <CheckBox Name="RestartSoundsCheckBox" Text="{Loc 'ui-options-restart-sounds'}" />
                 <CheckBox Name="EventMusicCheckBox" Text="{Loc 'ui-options-event-music'}" />

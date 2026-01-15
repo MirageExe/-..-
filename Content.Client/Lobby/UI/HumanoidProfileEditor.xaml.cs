@@ -197,6 +197,8 @@ using Robust.Shared.Utility;
 using Direction = Robust.Shared.Maths.Direction;
 using Content.Goobstation.Common.CCVar; // Goob Station - Barks
 using Content.Goobstation.Common.Barks; // Goob Station - Barks
+using Content.Shared._Amour; // Amour - TTS
+using Content.Shared._Amour.TTS; // Amour - TTS
 namespace Content.Client.Lobby.UI
 {
     [GenerateTypedNameReferences]
@@ -409,6 +411,17 @@ namespace Content.Client.Lobby.UI
             {
                 BarksContainer.Visible = true;
                 InitializeBarkVoice();
+            }
+
+            #endregion
+
+            // Amour - TTS
+            #region TTS
+
+            if (configurationManager.GetCVar(WhiteCVars.TtsEnabled))
+            {
+                TTSContainer.Visible = true;
+                InitializeTTSVoice();
             }
 
             #endregion
@@ -1331,6 +1344,7 @@ namespace Content.Client.Lobby.UI
             UpdateSaveButton();
             UpdateMarkings();
             UpdateBarkVoice(); // Goob Station - Barks
+            UpdateTTSVoice(); // Amour - TTS
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
@@ -1910,6 +1924,7 @@ namespace Content.Client.Lobby.UI
             UpdateSpeciesGuidebookIcon();
             ReloadPreview();
             UpdateBarkVoice(); // Goob Station - Barks
+            UpdateTTSVoice(); // Amour - TTS
             // begin Goobstation: port EE height/width sliders
             // Changing species provides inaccurate sliders without these
             UpdateHeightWidthSliders();
@@ -1955,6 +1970,14 @@ namespace Content.Client.Lobby.UI
             IsDirty = true;
         }
         // Goob Station - End
+
+        // Amour - TTS Start
+        private void SetTTSVoice(TTSVoicePrototype newVoice)
+        {
+            Profile = Profile?.WithVoice(newVoice);
+            IsDirty = true;
+        }
+        // Amour - TTS End
 
         public bool IsDirty
         {

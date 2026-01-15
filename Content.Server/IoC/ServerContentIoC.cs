@@ -170,6 +170,7 @@ using Content.Server._Orion.ServerProtection.Emoting;
 using Content.Server._RMC14.LinkAccount;
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
+using Content.Server._Amour.TTS;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Notes;
 using Content.Server.Afk;
@@ -254,6 +255,7 @@ namespace Content.Server.IoC
             IoCManager.Register<ChatProtectionSystem>();
             IoCManager.Register<EmoteProtectionSystem>();
             // Orion-End
+            IoCManager.Register<TTSManager>(); // WD EDIT TTS
         }
     }
 }

@@ -138,12 +138,20 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                                 <!-- end Goobstation: port EE height/width sliders -->
                                 <!-- Corvax-Frontier-Barks-Start -->
                                 <BoxContainer HorizontalExpand="True" Visible="False" Name="BarksContainer">
-                                    <Label Text="{Loc 'humanoid-profile-editor-voice-label'}" />
+                                    <Label Text="{Loc 'humanoid-profile-editor-barks-label'}" />
                                     <Control HorizontalExpand="True"/>
                                     <OptionButton Name="BarkVoiceButton" HorizontalAlignment="Right" />
                                     <Button Name="BarkVoicePlayButton" Text="{Loc 'humanoid-profile-editor-voice-play'}" MaxWidth="80" />
                                 </BoxContainer>
                                 <!-- Corvax-Frontier-Barks-End -->
+                                <!-- Amour-TTS-Start -->
+                                <BoxContainer HorizontalExpand="True" Visible="False" Name="TTSContainer">
+                                    <Label Text="{Loc 'humanoid-profile-editor-tts-label'}" />
+                                    <Control HorizontalExpand="True"/>
+                                    <OptionButton Name="TTSVoiceButton" HorizontalAlignment="Right" />
+                                    <Button Name="TTSVoicePlayButton" Text="{Loc 'humanoid-profile-editor-voice-play'}" MaxWidth="80" />
+                                </BoxContainer>
+                                <!-- Amour-TTS-End -->
                                 <!-- Orion-Start -->
                                 <BoxContainer HorizontalExpand="True">
                                     <Label Text="{Loc 'humanoid-profile-editor-uplink-label'}" />
