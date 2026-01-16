@@ -44,10 +44,14 @@
       time: 45000 #12.50 hrs # Amour
     - !type:AgeRequirement
       requiredAge: 21
-    - !type:SpeciesRequirement # Goob - None Felinid
-      inverted: true
+    - !type:SpeciesRequirement # Amour
       species:
-      - Felinid
+      - Human
+      - Chitinid
+      - Yowie
+      - Dwarf
+      - SlimePerson
+      - Reptilian
 #  guides: # Orion-Edit: Removed because dont have this SOP
 #  - BlueshieldOfficer SOP
 #  - Command

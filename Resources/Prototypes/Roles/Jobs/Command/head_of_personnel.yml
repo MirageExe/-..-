@@ -152,10 +152,18 @@
     - !type:DepartmentTimeRequirement
       department: Command
       time: 7200 #2 hrs # Amour
-    - !type:SpeciesRequirement # Goob - None Felinid
-      inverted: true
+    - !type:SpeciesRequirement # Amour
       species:
+      - Human
       - Felinid
+      - IPC
+      - Dwarf
+      - Harpy
+      - Tajaran
+      - Vulpkanin
+      - Arachnid
+      - SlimePerson
+      - Plasmaman
 #  guides: # goobstation | Orion-Edit: Removed because dont have this SOP
 #  - Command
 #  - Succession

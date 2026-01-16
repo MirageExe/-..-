@@ -144,6 +144,14 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 18000 #5 hrs # Amour
+    - !type:SpeciesRequirement # Amour
+      species:
+      - Human
+      - Chitinid
+      - Yowie
+      - Dwarf
+      - SlimePerson
+      - Reptilian
   weight: 5
   startingGear: WardenGear
   icon: "JobIconWarden"

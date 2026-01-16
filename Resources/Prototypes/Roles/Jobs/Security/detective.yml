@@ -72,6 +72,19 @@
   - !type:RoleTimeRequirement
     role: JobSecurityOfficer
     time: 9000 #2.50 hrs # Amour
+  - !type:SpeciesRequirement # Amour
+    species:
+    - Human
+    - Chitinid
+    - Yowie
+    - Dwarf
+    - SlimePerson
+    - Reptilian
+    - Felinid
+    - Vulpkanin
+    - Tajaran
+    - Moth
+    - Rodentia
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos

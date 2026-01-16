@@ -143,6 +143,15 @@
   - !type:DepartmentTimeRequirement
     department: Science
     time: 18000 #5 hrs # Amour
+  - !type:SpeciesRequirement # Amour
+    species:
+    - Human
+    - Shadowkin
+    - Chitinid
+    - IPC
+    - Diona
+    - Plasmaman
+    - SlimePerson
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"

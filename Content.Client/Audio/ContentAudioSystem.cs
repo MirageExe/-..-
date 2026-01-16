@@ -40,12 +40,12 @@ public sealed partial class ContentAudioSystem : SharedContentAudioSystem
      */
 
     public const float MasterVolumeMultiplier = 3f;
-    public const float MidiVolumeMultiplier = 0.25f;
+    public const float MidiVolumeMultiplier = 0.5f; // Amour edit
     public const float AmbienceMultiplier = 3f;
     public const float AmbientMusicMultiplier = 3f;
     public const float LobbyMultiplier = 3f;
     public const float InterfaceMultiplier = 2f;
-    public const float TTSMultiplier = 1f; // WD EDIT TTS
+    public const float TTSMultiplier = 1f; // Amour
     public const float BarksMultiplier = 3f; // Goob Station - Barks
     public const float AdminNotificationsMultiplier = 1f; // Goobstation - Admin Notifications
 

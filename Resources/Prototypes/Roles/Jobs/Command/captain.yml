@@ -154,6 +154,11 @@
     - !type:DepartmentTimeRequirement
       department: Command
       time: 14000 #3.89 hrs # Amour
+    - !type:SpeciesRequirement # Amour
+      species:
+      - Human
+      - IPC
+      - Plasmaman
       #any MRP using our code might eventually want to use it
     # - !type:SaturationRequirement # MisandryBox - no neon hair on captain
     #   hairColorSaturation: 0.30

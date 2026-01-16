@@ -92,6 +92,14 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 4500 #1.25 hrs # Amour
+    - !type:SpeciesRequirement # Amour
+      species:
+      - Human
+      - Chitinid
+      - Yowie
+      - Dwarf
+      - SlimePerson
+      - Reptilian
   startingGear: SecurityOfficerGear
   icon: "JobIconSecurityOfficer"
   supervisors: job-supervisors-hos

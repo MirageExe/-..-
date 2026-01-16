@@ -15,6 +15,16 @@
   - !type:DepartmentTimeRequirement
     department: Security
     time: 9000 #2.50 hrs # Amour
+  - !type:SpeciesRequirement # Amour
+    species:
+    - Human
+    - Chitinid
+    - Yowie
+    - Dwarf
+    - SlimePerson
+    - Reptilian
+    - Felinid
+    - Moth
   startingGear: BrigmedicGear
   icon: "JobIconBrigmedic"
   supervisors: job-supervisors-hos
