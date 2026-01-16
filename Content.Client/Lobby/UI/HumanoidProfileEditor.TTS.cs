@@ -4,6 +4,7 @@
 
 using Content.Client._Amour.TTS;
 using Content.Shared._Amour.TTS;
+using Content.Shared.Humanoid;
 using System.Linq;
 
 namespace Content.Client.Lobby.UI;
@@ -11,12 +12,39 @@ namespace Content.Client.Lobby.UI;
 public sealed partial class HumanoidProfileEditor
 {
     private List<TTSVoicePrototype> _ttsPrototypes = new();
+    private TTSVoiceOptionButton? _ttsVoiceButton;
 
     private void InitializeTTSVoice()
     {
-        TTSVoiceButton.OnItemSelected += args =>
+        var parent = TTSVoiceButton.Parent;
+        if (parent == null)
+            return;
+
+        var index = -1;
+        for (var i = 0; i < parent.ChildCount; i++)
         {
-            TTSVoiceButton.SelectId(args.Id);
+            if (parent.GetChild(i) == TTSVoiceButton)
+            {
+                index = i;
+                break;
+            }
+        }
+
+        _ttsVoiceButton = new TTSVoiceOptionButton
+        {
+            HorizontalAlignment = TTSVoiceButton.HorizontalAlignment
+        };
+
+        if (index >= 0)
+        {
+            parent.RemoveChild(TTSVoiceButton);
+            parent.AddChild(_ttsVoiceButton);
+            _ttsVoiceButton.SetPositionInParent(index);
+        }
+
+        _ttsVoiceButton.OnItemSelected += args =>
+        {
+            _ttsVoiceButton.SelectId(args.Id);
             SetTTSVoice(_ttsPrototypes[args.Id]);
         };
 
@@ -25,16 +53,19 @@ public sealed partial class HumanoidProfileEditor
 
     private void UpdateTTSVoice()
     {
-        if (Profile is null)
+        if (Profile is null || _ttsVoiceButton is null)
             return;
+
+        var profileSex = Profile.Sex;
 
         _ttsPrototypes = _prototypeManager
             .EnumeratePrototypes<TTSVoicePrototype>()
             .Where(o => o.RoundStart)
-            .OrderBy(o => Loc.GetString(o.Name))
+            .OrderBy(o => o.Sex == profileSex ? 0 : (o.Sex == Sex.Unsexed ? 1 : 2))
+            .ThenBy(o => Loc.GetString(o.Name))
             .ToList();
 
-        TTSVoiceButton.Clear();
+        _ttsVoiceButton.Clear();
 
         var selectedTTSId = -1;
         for (var i = 0; i < _ttsPrototypes.Count; i++)
@@ -43,13 +74,13 @@ public sealed partial class HumanoidProfileEditor
             if (voice.ID == Profile.Voice)
                 selectedTTSId = i;
 
-            TTSVoiceButton.AddItem(Loc.GetString(voice.Name), i);
+            _ttsVoiceButton.AddVoiceItem(Loc.GetString(voice.Name), voice.Sex, i);
         }
 
         if (selectedTTSId == -1)
             selectedTTSId = 0;
 
-        TTSVoiceButton.SelectId(selectedTTSId);
+        _ttsVoiceButton.SelectId(selectedTTSId);
         if (_ttsPrototypes.Count > 0)
             SetTTSVoice(_ttsPrototypes[selectedTTSId]);
     }
