@@ -1862,6 +1862,9 @@ namespace Content.Client.Lobby.UI
 
             _loadoutWindow?.Dispose();
             _loadoutWindow = null;
+
+            _ttsVoiceMenu?.Dispose(); // Amour 
+            _ttsVoiceMenu = null;
         }
 
         protected override void EnteredTree()
