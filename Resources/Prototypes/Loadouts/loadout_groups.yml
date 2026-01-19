@@ -177,6 +177,7 @@
   - PlushieSpaceLizard
   - PersonalAI # Goobstation
   - GoldenPersonalAI # Goobstation
+  - InteQMiniFlag # Orion
   - CrewCassette # Goobstation
   - ThreeCandles
   - Lighter
@@ -481,6 +482,10 @@
   minLimit: 0
   loadouts:
   - PassengerWintercoat
+  # Orion-Start
+  - InteQWinter
+  - InteQHoodie
+  # Orion-End
 
 - type: loadoutGroup
   id: PassengerShoes
