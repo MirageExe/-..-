@@ -1,7 +1,7 @@
 - type: gameMap
   id: WonderBox
   mapName: 'WonderBox Station'
-  mapPath: /Maps/_Amour/Wonderbox.yml
+  mapPath: /Maps/_Amour/WonderBox.yml
   minPlayers: 0
   stations:
     WonderBoxStation:
