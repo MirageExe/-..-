@@ -55,6 +55,11 @@ namespace Content.Shared.Chat
         /// </summary>
         Emotes = ChatChannel.Emotes,
 
+        /// <summary>
+        ///     Amour - Quiet Emotes
+        /// </summary>
+        QuietEmotes = 1 << 17,
+
         // Goobstation - Starlight collective mind port
         /// <summary>
         ///     CollectiveMind
