@@ -11,7 +11,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Timing;
 
-namespace Content.Server.Ghost;
+namespace Content.Server._Orion.Ghost;
 
 public sealed class GhostReturnToRoundSystem : EntitySystem
 {
@@ -25,6 +25,8 @@ public sealed class GhostReturnToRoundSystem : EntitySystem
 
     public override void Initialize()
     {
+        base.Initialize();
+
         SubscribeNetworkEvent<GhostReturnToRoundRequest>(OnGhostReturnToRoundRequest);
     }
 
@@ -64,7 +66,7 @@ public sealed class GhostReturnToRoundSystem : EntitySystem
         if (_mindSystem.TryGetMind(uid, out _, out var mind) && mind.TimeOfDeath.HasValue)
             deathTime = mind.TimeOfDeath.Value;
 
-        var timeUntilRespawn = TimeSpan.FromMinutes(_cfg.GetCVar(CCVars.GhostRespawnTime));
+        var timeUntilRespawn = TimeSpan.FromSeconds(_cfg.GetCVar(CCVars.GhostRespawnTime));
         var timePast = _gameTiming.CurTime - deathTime;
 
         if (timePast >= timeUntilRespawn)
