@@ -257,7 +257,6 @@ namespace Content.IntegrationTests.Tests
         ///     all components on every entity.
         /// </summary>
         [Test, NonParallelizable] // Goobstation edit - NonParallelizable
-        [Ignore("Fucking broken, maybe someone fix")] // Orion
         public async Task SpawnAndDirtyAllEntities()
         {
             // This test dirties the pair as it simply deletes ALL entities when done. Overhead of restarting the round

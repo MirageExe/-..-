@@ -41,9 +41,6 @@
     size: Tiny
     shape:
     - 0,0,0,1
-  - type: Tag # Orion
-    tags:
-    - CigPack
   - type: Storage
     grid:
     - 0,0,2,1
@@ -71,3 +68,4 @@
   - type: Tag # Goobstation
     tags:
     - SyringeCase
+    - CigPack # Orion
