@@ -237,8 +237,9 @@ namespace Content.IntegrationTests.Tests
             "Serpentcrest",
             "Submarine",
             "TestTeg",        // Dev map
-            "Train"           // Not in pool
+            "Train",          // Not in pool
             // Goob end
+            "WonderBox"       // Amour
         };
         // Goobstation edit start, yeah i know, but this is easier and less load than loading protoman or something.
         private static readonly string[] GameMapsInCurrentPool = // plus dev
