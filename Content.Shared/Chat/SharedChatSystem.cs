@@ -59,6 +59,7 @@ public abstract class SharedChatSystem : EntitySystem
     public const char WhisperPrefix = ',';
     public const char TelepathicPrefix = '='; //Nyano - Summary: Adds the telepathic channel's prefix.
     public const char CollectiveMindPrefix = '+'; // Goobstation - Starlight collective mind port
+    public const char QuietEmotePrefix = '~'; // Amour - Quiet emote prefix
     public const char DefaultChannelKey = 'h';
 
     public static readonly ProtoId<RadioChannelPrototype> CommonChannel = "Common";
@@ -443,7 +444,8 @@ public enum InGameICChatType : byte // Einstein Engines - Make InGameIIChatType 
     Emote,
     Whisper,
     Telepathic, // Goobstation Change
-    CollectiveMind // Goobstation - Starlight collective mind port
+    CollectiveMind, // Goobstation - Starlight collective mind port
+    QuietEmote // Amour - Quiet emote
 }
 
 /// <summary>

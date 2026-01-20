@@ -30,6 +30,10 @@ using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
 using Content.Shared.Pointing;
 using Content.Goobstation.Shared.Changeling.Components;
+using Content.Server.Mobs;
+using Content.Shared.Examine;
+using Content.Shared.Mobs;
+using Content.Shared.Mobs.Systems;
 
 namespace Content.Server.Body.Systems
 {
@@ -37,6 +41,10 @@ namespace Content.Server.Body.Systems
     {
         [Dependency] private readonly SharedMindSystem _mindSystem = default!;
         [Dependency] private readonly SharedBodySystem _bodySystem = default!; // Shitmed Change
+        [Dependency] private readonly MetaDataSystem _metaData = default!; // Orion
+        [Dependency] private readonly MobStateSystem _mobState = default!; // Orion
+        [Dependency] private readonly DeathgaspSystem _deathgasp = default!; // Orion
+
         public override void Initialize()
         {
             base.Initialize();
@@ -45,6 +53,7 @@ namespace Content.Server.Body.Systems
         // Shitmed Change Start
             SubscribeLocalEvent<BrainComponent, OrganRemovedFromBodyEvent>(HandleRemoval);
             SubscribeLocalEvent<BrainComponent, PointAttemptEvent>(OnPointAttempt);
+            SubscribeLocalEvent<DebrainedComponent, ExaminedEvent>(OnBodyExamined); // Orion
         }
 
         private void HandleRemoval(EntityUid uid, BrainComponent brain, ref OrganRemovedFromBodyEvent args)
@@ -57,8 +66,16 @@ namespace Content.Server.Body.Systems
             brain.Active = false;
             if (!CheckOtherBrains(args.OldBody))
             {
+                TryRenameBrain((uid, brain), args.OldBody); // Orion
                 // Prevents revival, should kill the user within a given timespan too.
                 EnsureComp<DebrainedComponent>(args.OldBody);
+                // Orion-Start: Debraining should instantly kill
+                if (!_mobState.IsDead(args.OldBody))
+                {
+                    _mobState.ChangeMobState(args.OldBody, MobState.Dead);
+                    _deathgasp.Deathgasp(args.OldBody);
+                }
+                // Orion-End
                 HandleMind(uid, args.OldBody);
             }
         }
@@ -72,6 +89,7 @@ namespace Content.Server.Body.Systems
 
             if (!CheckOtherBrains(args.Body))
             {
+                TryRenameBrain((uid, brain), args.Body); // Orion
                 RemComp<DebrainedComponent>(args.Body);
                 HandleMind(args.Body, uid, brain);
             }
@@ -94,8 +112,10 @@ namespace Content.Server.Body.Systems
                 return;
 
             _mindSystem.TransferTo(mindId, newEntity, mind: mind);
+            // Orion-Edit-Start
             if (brain != null)
                 brain.Active = true;
+            // Orion-Edit-End
         }
 
         private bool CheckOtherBrains(EntityUid entity)
@@ -103,7 +123,7 @@ namespace Content.Server.Body.Systems
             var hasOtherBrains = false;
             if (TryComp<BodyComponent>(entity, out var body))
             {
-                if (TryComp<BrainComponent>(entity, out var bodyBrain))
+                if (TryComp<BrainComponent>(entity, out _))
                     hasOtherBrains = true;
                 else
                 {
@@ -126,5 +146,23 @@ namespace Content.Server.Body.Systems
         {
             args.Cancel();
         }
+
+        // Orion-Start
+        private void TryRenameBrain(Entity<BrainComponent> ent, EntityUid playerEntity)
+        {
+            if (ent.Comp.Renamed || TerminatingOrDeleted(ent))
+                return;
+
+            var newName = Loc.GetString("comp-brain-name", ("name", Name(ent)), ("player", Name(playerEntity)));
+            _metaData.SetEntityName(ent, newName);
+
+            ent.Comp.Renamed = true;
+        }
+
+        private void OnBodyExamined(Entity<DebrainedComponent> ent, ref ExaminedEvent args)
+        {
+            args.PushMarkup(Loc.GetString("comp-brain-examine-debrained", ("entity", ent)));
+        }
+        // Orion-End
     }
 }

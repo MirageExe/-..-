@@ -1,4 +1,4 @@
-ent-CBURNLeaderPDA = КПК Лидера РХБЗЗ
+ent-CBURNLeaderPDA = ПДА Лидера РХБЗЗ
     .desc = { ent-CBURNPDA.desc }
-ent-DeathsquadLeaderPDA = КПК Лидера Эскадрона
+ent-DeathsquadLeaderPDA = ПДА Лидера Эскадрона
     .desc = { ent-DeathsquadPDA.desc }

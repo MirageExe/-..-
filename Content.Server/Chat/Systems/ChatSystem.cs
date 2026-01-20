@@ -191,6 +191,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     public const int VoiceRange = 10; // how far voice goes in world units
     public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
     public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
+    public const int QuietEmoteRange = 2; // Amour - quiet emote 2 tile range
     public const string DefaultAnnouncementSound = "/Audio/_Orion/Announcements/announce.ogg"; // Orion-Edit
     public const string CentComAnnouncementSound = "/Audio/_Orion/Announcements/centcomm.ogg"; // Orion
     public const float DefaultObfuscationFactor = 0.2f; // Percentage of symbols in a whispered message that can be seen even by "far" listeners
@@ -447,6 +448,9 @@ public sealed partial class ChatSystem : SharedChatSystem
                 break;
             case InGameICChatType.Telepathic:
                 _telepath.SendTelepathicChat(source, message, range == ChatTransmitRange.HideChat);
+                break;
+            case InGameICChatType.QuietEmote: // Amour - Quiet emote with 2 tile range
+                SendEntityQuietEmote(source, message, range, nameOverride, language, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);
                 break;
         }
     }
