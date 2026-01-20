@@ -20,7 +20,9 @@ humanoid-profile-editor-link-tooltip =
     Примечание: Если ссылка содержит в себе вредоносные материалы — сообщите об этом администрации.
 
 humanoid-profile-editor-uplink-label = Аплинк:
-humanoid-profile-editor-uplink-pda = КПК
+humanoid-profile-editor-uplink-pda = ПДА
 humanoid-profile-editor-uplink-implant = Имплант
 humanoid-profile-editor-uplink-radio = Радио
 humanoid-profile-editor-uplink-crystals = Телекристаллы
+
+humanoid-profile-editor-preference-pda-ringtone-label = Рингтон ПДА:
