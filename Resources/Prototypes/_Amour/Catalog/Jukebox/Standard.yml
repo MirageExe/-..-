@@ -1,0 +1,29 @@
+- type: jukebox
+  id: IReallyWantToStayAtYourHouse
+  name: Rosa Walton - I Really Want to Stay at Your House
+  path:
+    path: /Audio/_Amour/Jukebox/RosaWalton/RosaWalton_IReallyWantToStayAtYourHouse.ogg
+
+- type: jukebox
+  id: SpaceShuttle
+  name: Эдипов Комплекс - Space Shuttle
+  path:
+    path: /Audio/_Amour/Lobby/EdipovKompleks/EdipovKompleks_SpaceShuttle.ogg
+
+- type: jukebox
+  id: Duvet
+  name: boa - Duvet
+  path:
+    path: /Audio/_Amour/Lobby/boa/boa_Duvet.ogg
+
+- type: jukebox
+  id: LoveIllumination
+  name: Franz Ferdinand - Love Illumination
+  path:
+    path: /Audio/_Amour/Lobby/FranzFerdinand/FranzFerdinand_LoveIllumination.ogg
+
+- type: jukebox
+  id: MoyaOborona
+  name: Егор Летов - Моя оборона
+  path:
+    path: /Audio/_Amour/Jukebox/EgorLetov/EgorLetov_MoyaOborona.ogg
