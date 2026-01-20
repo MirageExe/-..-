@@ -62,9 +62,9 @@ public sealed class CombatModeSystem : SharedCombatModeSystem
         base.Initialize();
 
         SubscribeLocalEvent<CombatModeComponent, AfterAutoHandleStateEvent>(OnHandleState);
-        SubscribeLocalEvent<CombatModeComponent, GetStatusIconsEvent>(UpdateCombatModeIndicator); // Orion
+        // SubscribeLocalEvent<CombatModeComponent, GetStatusIconsEvent>(UpdateCombatModeIndicator); // Orion
         Subs.CVar(_cfg, CCVars.CombatModeIndicatorsPointShow, OnShowCombatIndicatorsChanged, true);
-        Subs.CVar(_cfg, CCVars.CombatIndicator, (bool value) => OnShowCombatIndicatorChanged(value), true); // Orion
+        // Subs.CVar(_cfg, CCVars.CombatIndicator, (bool value) => OnShowCombatIndicatorChanged(value), true); // Orion
 
         // Orion-Start
         _spriteQuery = GetEntityQuery<SpriteComponent>();
@@ -135,46 +135,46 @@ public sealed class CombatModeSystem : SharedCombatModeSystem
     }
 
     // Orion-Start
-    private bool _combatIndicatorEnabled = false;
+    // private bool _combatIndicatorEnabled = false;
 
-    private void OnShowCombatIndicatorChanged(bool value)
-    {
-        _combatIndicatorEnabled = value;
-    }
+    // private void OnShowCombatIndicatorChanged(bool value)
+    // {
+    //     _combatIndicatorEnabled = value;
+    // }
 
-    private void UpdateCombatModeIndicator(EntityUid uid, CombatModeComponent comp, ref GetStatusIconsEvent _)
-    {
-        if (!_combatIndicatorEnabled)
-        {
-            if (_spriteQuery.TryComp(uid, out var sprite) && sprite.LayerMapTryGet("combat_mode_indicator", out var layerToRemove))
-            {
-                sprite.RemoveLayer(layerToRemove);
-            }
-            return;
-        }
-
-        if (comp.IsInCombatMode)
-        {
-            if (!_spriteQuery.TryComp(uid, out var sprite))
-                return;
-
-            if (!sprite.LayerMapTryGet("combat_mode_indicator", out var layer))
-            {
-                if (!_spriteQuery.TryComp(uid, out var sprite2))
-                    return;
-
-                layer = sprite2.AddLayer(new SpriteSpecifier.Rsi(new ResPath("_Orion/Effects/combat_mode.rsi"), "combat_mode"));
-                sprite2.LayerMapSet("combat_mode_indicator", layer);
-            }
-        }
-        else
-        {
-            if (_spriteQuery.TryComp(uid, out var sprite) && sprite.LayerMapTryGet("combat_mode_indicator", out var layerToRemove))
-            {
-                sprite.RemoveLayer(layerToRemove);
-            }
-        }
-    }
+    // private void UpdateCombatModeIndicator(EntityUid uid, CombatModeComponent comp, ref GetStatusIconsEvent _)
+    // {
+    //     if (!_combatIndicatorEnabled)
+    //     {
+    //         if (_spriteQuery.TryComp(uid, out var sprite) && sprite.LayerMapTryGet("combat_mode_indicator", out var layerToRemove))
+    //         {
+    //             sprite.RemoveLayer(layerToRemove);
+    //         }
+    //         return;
+    //     }
+    //
+    //     if (comp.IsInCombatMode)
+    //     {
+    //         if (!_spriteQuery.TryComp(uid, out var sprite))
+    //             return;
+    //
+    //         if (!sprite.LayerMapTryGet("combat_mode_indicator", out var layer))
+    //         {
+    //             if (!_spriteQuery.TryComp(uid, out var sprite2))
+    //                 return;
+    //
+    //             layer = sprite2.AddLayer(new SpriteSpecifier.Rsi(new ResPath("_Orion/Effects/combat_mode.rsi"), "combat_mode"));
+    //             sprite2.LayerMapSet("combat_mode_indicator", layer);
+    //         }
+    //     }
+    //     else
+    //     {
+    //         if (_spriteQuery.TryComp(uid, out var sprite) && sprite.LayerMapTryGet("combat_mode_indicator", out var layerToRemove))
+    //         {
+    //             sprite.RemoveLayer(layerToRemove);
+    //         }
+    //     }
+    // }
 
     /// <summary>
     /// Plays sounds based on activation/deactivation of the CombatMode
