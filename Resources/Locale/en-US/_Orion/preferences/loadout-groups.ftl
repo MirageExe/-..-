@@ -1,4 +1,4 @@
-﻿loadout-group-security-gun = Security pistol
+loadout-group-security-gun = Security pistol
 
 loadout-group-passenger-head = Passenger head
 
