@@ -1,18 +1,15 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-<<<<<<<< HEAD:Resources/Textures/_Amour/Ghosts/shelupon-ghost.rsi/meta.json
   "copyright": "poebat",
-========
-  "copyright": "Taken from TG station",
->>>>>>>> upstream/master:Resources/Textures/_Orion/Interface/Actions/actions.rsi/meta.json
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "round_end"
+      "name": "animated",
+      "delays": [[0.2, 0.2, 0.2, 0.2]]
     }
   ]
 }
