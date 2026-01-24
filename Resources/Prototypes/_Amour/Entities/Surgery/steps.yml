@@ -1,0 +1,38 @@
+﻿- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepChangeSex
+  name: Tighten the skin
+  components:
+  - type: SurgeryStep
+    tool:
+    - type: Tweezers
+    duration: 16
+  - type: Sprite
+    sprite: _Shitmed/Objects/Specific/Medical/Surgery/hemostat.rsi
+    state: hemostat
+  - type: SurgeryChangeSexStep
+  - type: SurgeryStepPainInflicter
+    amount: 90
+    painDuration: 60
+    painType: TraumaticPain
+    sleepModifier: 0
+
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepUndoChangeSex
+  name: Tighten the skin
+  components:
+  - type: SurgeryStep
+    tool:
+    - type: Tweezers
+    duration: 16
+  - type: Sprite
+    sprite: _Shitmed/Objects/Specific/Medical/Surgery/hemostat.rsi
+    state: hemostat
+  - type: SurgeryUndoChangeSexStep
+  - type: SurgeryStepPainInflicter
+    amount: 90
+    painDuration: 60
+    painType: TraumaticPain
+    sleepModifier: 0
