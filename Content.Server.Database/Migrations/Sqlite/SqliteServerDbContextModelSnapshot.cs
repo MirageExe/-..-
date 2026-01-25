@@ -442,6 +442,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("player_id");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("is_active");
+
                     b.Property<int?>("OocColor")
                         .HasColumnType("INTEGER")
                         .HasColumnName("ooc_color");

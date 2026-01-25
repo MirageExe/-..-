@@ -2068,7 +2068,10 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         {
             await using var db = await GetDb(cancel);
             var booster = await db.DbContext.AmourBoosters.FirstOrDefaultAsync(b => b.PlayerId == player, cancel);
-            return booster?.OocColor;
+            // Only return color if booster is active
+            if (booster == null || !booster.IsActive)
+                return null;
+            return booster.OocColor;
         }
 
         public async Task SetBoosterColor(Guid player, int? color)
