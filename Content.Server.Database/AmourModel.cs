@@ -13,4 +13,6 @@ public sealed class AmourBooster
     public Player Player { get; set; } = default!;
 
     public int? OocColor { get; set; }
+
+    public bool IsActive { get; set; } = false;
 }
