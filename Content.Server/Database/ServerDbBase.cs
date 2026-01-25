@@ -2063,6 +2063,40 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             await db.DbContext.SaveChangesAsync();
         }
 
+        // Amour Boosters
+        public async Task<int?> GetBoosterColor(Guid player, CancellationToken cancel)
+        {
+            await using var db = await GetDb(cancel);
+            var booster = await db.DbContext.AmourBoosters.FirstOrDefaultAsync(b => b.PlayerId == player, cancel);
+            return booster?.OocColor;
+        }
+
+        public async Task SetBoosterColor(Guid player, int? color)
+        {
+            await using var db = await GetDb();
+
+            var booster = await db.DbContext.AmourBoosters.FirstOrDefaultAsync(b => b.PlayerId == player);
+
+            if (color.HasValue)
+            {
+                if (booster == null)
+                {
+                    booster = new AmourBooster { PlayerId = player, OocColor = color.Value };
+                    db.DbContext.AmourBoosters.Add(booster);
+                }
+                else
+                {
+                    booster.OocColor = color.Value;
+                }
+            }
+            else if (booster != null)
+            {
+                db.DbContext.AmourBoosters.Remove(booster);
+            }
+
+            await db.DbContext.SaveChangesAsync();
+        }
+
         public async Task SetLobbyMessage(Guid player, string message)
         {
             await using var db = await GetDb();

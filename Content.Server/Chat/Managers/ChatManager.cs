@@ -182,6 +182,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.InteropServices;
 using Content.Server._Orion.ServerProtection.Chat;
+using Content.Server._Amour.Booster;
 using Content.Server._RMC14.LinkAccount;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
@@ -228,6 +229,7 @@ internal sealed partial class ChatManager : IChatManager
     [Dependency] private readonly PlayerRateLimitManager _rateLimitManager = default!;
     [Dependency] private readonly ISharedPlayerManager _player = default!;
     [Dependency] private readonly LinkAccountManager _linkAccount = default!; // RMC - Patreon
+    [Dependency] private readonly IEntitySystemManager _entitySystemManager = default!; // Amour - Boosters
     [Dependency] private readonly ChatProtectionSystem _chatProtection = default!; // Orion
 
     /// <summary>
@@ -441,10 +443,21 @@ internal sealed partial class ChatManager : IChatManager
 
         Color? colorOverride = null;
         var wrappedMessage = Loc.GetString("chat-manager-send-ooc-wrap-message", ("playerName",player.Name), ("message", FormattedMessage.EscapeText(message)));
+
         if (_adminManager.HasAdminFlag(player, AdminFlags.NameColor))
         {
             var prefs = _preferencesManager.GetPreferences(player.UserId);
             colorOverride = prefs.AdminOOCColor;
+        }
+        
+        // Amour - Booster OOC color
+        if (_entitySystemManager.GetEntitySystem<AmourBoosterSystem>().GetOocColor(player.UserId) is { } boosterColor)
+        {
+            var hexColor = $"#{boosterColor.R:X2}{boosterColor.G:X2}{boosterColor.B:X2}";
+            wrappedMessage = Loc.GetString("chat-manager-send-ooc-wrap-message-booster",
+                ("playerName", player.Name),
+                ("boosterColor", hexColor),
+                ("message", FormattedMessage.EscapeText(message)));
         }
         // RMC - Heavily modified for patreon.
         if (_netConfigManager.GetClientCVar(player.Channel, CCVars.ShowOocPatronColor) &&

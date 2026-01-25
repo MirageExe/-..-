@@ -439,6 +439,10 @@ namespace Content.Server.Database
 
         Task SetGhostColor(Guid player, System.Drawing.Color? color);
 
+        // Amour Boosters
+        Task<int?> GetBoosterColor(Guid player, CancellationToken cancel);
+        Task SetBoosterColor(Guid player, int? color);
+
         Task SetLobbyMessage(Guid player, string message);
 
         Task SetNTShoutout(Guid player, string name);
@@ -1238,6 +1242,19 @@ namespace Content.Server.Database
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.SetGhostColor(player, color));
+        }
+
+        // Amour Boosters
+        public Task<int?> GetBoosterColor(Guid player, CancellationToken cancel)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetBoosterColor(player, cancel));
+        }
+
+        public Task SetBoosterColor(Guid player, int? color)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.SetBoosterColor(player, color));
         }
 
         public Task SetLobbyMessage(Guid player, string message)

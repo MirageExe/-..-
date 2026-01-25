@@ -187,6 +187,7 @@ namespace Content.Server.Database
         public DbSet<RMCLinkedAccount> RMCLinkedAccounts { get; set; } = default!;
         public DbSet<RMCPatronTier> RMCPatronTiers { get; set; } = default!;
         public DbSet<RMCPatron> RMCPatrons { get; set; } = default!;
+        public DbSet<AmourBooster> AmourBoosters { get; set; } = default!;
         public DbSet<RMCLinkingCodes> RMCLinkingCodes { get; set; } = default!;
         public DbSet<RMCLinkedAccountLogs> RMCLinkedAccountLogs { get; set; } = default!;
         public DbSet<RMCPatronLobbyMessage> RMCPatronLobbyMessages { get; set; } = default!;
@@ -574,6 +575,14 @@ namespace Content.Server.Database
                 .WithMany(p => p.LinkedAccountLogs)
                 .HasForeignKey(l => l.DiscordId)
                 .HasPrincipalKey(p => p.Id)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Amour Boosters
+            modelBuilder.Entity<AmourBooster>()
+                .HasOne(b => b.Player)
+                .WithOne()
+                .HasForeignKey<AmourBooster>(b => b.PlayerId)
+                .HasPrincipalKey<Player>(p => p.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // Goobstation Polls
