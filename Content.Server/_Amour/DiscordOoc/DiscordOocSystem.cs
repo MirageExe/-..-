@@ -1,5 +1,5 @@
 ﻿using Content.Server.Discord;
-using Content.Shared.CCVar;
+using Content.Shared._Amour.CCVar;
 using Robust.Shared.Configuration;
 
 namespace Content.Server._Amour.DiscordOoc;
@@ -13,6 +13,7 @@ public sealed class DiscordOocSystem : EntitySystem
     [Dependency] private readonly DiscordWebhook _discord = default!;
 
     private string _webhookUrl = string.Empty;
+    private WebhookIdentifier? _webhookId;
     private ISawmill _sawmill = default!;
 
     public override void Initialize()
@@ -20,7 +21,14 @@ public sealed class DiscordOocSystem : EntitySystem
         base.Initialize();
         _sawmill = Logger.GetSawmill("discord.ooc");
         
-        Subs.CVar(_cfg, CCVars.DiscordOocWebhook, url => _webhookUrl = url, true);
+        Subs.CVar(_cfg, AmourCCVars.DiscordOocWebhookUrl, url =>
+        {
+            _webhookUrl = url;
+            _webhookId = null;
+
+            if (!string.IsNullOrWhiteSpace(url))
+                _discord.TryGetWebhook(url, data => _webhookId = data.ToIdentifier());
+        }, true);
     }
 
     /// <summary>
@@ -36,17 +44,20 @@ public sealed class DiscordOocSystem : EntitySystem
             // Sanitize message
             var sanitizedMessage = message.Replace("@", "@\u200B"); // Prevent pings
             
+            if (_webhookId is not { } webhookId)
+                return;
+
+            var mentions = new WebhookMentions();
+            // Do not add anything to mentions.Parse => no mentions allowed.
+
             var payload = new WebhookPayload
             {
                 Username = playerName,
                 Content = sanitizedMessage,
-                AllowedMentions = new Dictionary<string, string[]>
-                {
-                    { "parse", Array.Empty<string>() } // No mentions allowed
-                }
+                AllowedMentions = mentions
             };
 
-            await _discord.CreateMessage(_webhookUrl, payload);
+            await _discord.CreateMessage(webhookId, payload);
         }
         catch (Exception ex)
         {

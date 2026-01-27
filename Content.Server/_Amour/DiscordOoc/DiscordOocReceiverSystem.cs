@@ -105,7 +105,7 @@ public sealed class DiscordOocReceiverSystem : EntitySystem
         // Format: DS: (PlayerName): message
         var message = $"DS: ({sender}): {content}";
         
-        _chat.DispatchServerMessage(message);
+        _chat.SendHookOOC(sender, content);
         _sawmill.Info($"Discord OOC: {sender}: {content}");
     }
 

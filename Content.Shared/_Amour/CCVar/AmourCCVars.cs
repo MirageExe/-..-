@@ -16,4 +16,10 @@ public sealed class AmourCCVars
     /// </summary>
     public static readonly CVarDef<string> DiscordOocBotApiPassword =
         CVarDef.Create("discord.ooc_bot_api_password", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /// <summary>
+    ///     URL of the Discord webhook used to send in-game OOC messages to Discord.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordOocWebhookUrl =
+        CVarDef.Create("discord.ooc_webhook_url", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
 }
