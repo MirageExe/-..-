@@ -9,28 +9,28 @@
 #  description: custom-ghost-personal-placeholder-desc
 
 # Force transparency on all custom ghosts
-- type: entity
-  parent: MobObserver
-  id: MobObserverCkey
-  abstract: true
-  components:
-  - type: Sprite
-    color: "#ffffffcc" # 0.8 alpha
-
-- type: entity
-  parent: MobObserverCkey
-  id: MobObserverCkeyPlaceholder
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Sprite
-    sprite: _Orion/Ghosts/placeholder.rsi
-
-- type: customGhost
-  id: CkeyPersonal
-  abstract: true
-  name: custom-ghost-personal-name
-  description: custom-ghost-personal-desc
-  category: personal
+#- type: entity # Amour-Remove
+#  parent: MobObserver
+#  id: MobObserverCkey
+#  abstract: true
+#  components:
+#  - type: Sprite
+#    color: "#ffffffcc" # 0.8 alpha
+#
+#- type: entity
+#  parent: MobObserverCkey
+#  id: MobObserverCkeyPlaceholder
+#  categories: [ HideSpawnMenu ]
+#  components:
+#  - type: Sprite
+#    sprite: _Orion/Ghosts/placeholder.rsi
+#
+#- type: customGhost
+#  id: CkeyPersonal
+#  abstract: true
+#  name: custom-ghost-personal-name
+#  description: custom-ghost-personal-desc
+#  category: personal
 
 
 
