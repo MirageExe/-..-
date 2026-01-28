@@ -37,4 +37,4 @@ gun-upgrade-crusher-sharpness = [bold]заострённый[/bold] клинок
 
 gun-upgrade-crusher-weights = [bold]увесистая[/bold] ложа
 gun-upgrade-crusher-lightweight = [bold]лёгкая[/bold] ложа
-фgun-upgrade-crusher-range = [bold]длинная[/bold] ложа
+gun-upgrade-crusher-range = [bold]длинная[/bold] ложа

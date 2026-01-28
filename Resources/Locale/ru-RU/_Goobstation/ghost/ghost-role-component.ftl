@@ -173,7 +173,12 @@ ghost-role-information-santa-description = Распространите ново
 
 ghost-role-information-slasher-token = Мясник (Токен)
 
-ghost-role-information-contractor-name = Контрактор Синдиката
-ghost-role-information-contractor-token = Контрактор Синдиката (Токен)
+ghost-role-information-sentientanimal-rules = Вы [color={role-type-sentient-animal-color}][bold]{role-type-sentient-animal-name}[/bold][/color]. Вы нейтральное животное, которое может действовать в целях самообороны, но в остальном НЕ стремится причинить вред экипажу.
+                                              Вы ничего не помните из своей прошлой жизни, и того чему научились, будучи призраком.
+                                              Вам разрешено запоминать знания об игре в целом, например, как готовить, как использовать предметы и т.д., Однако вы не разбираетесь в продвинутых ролях.
+                                              Вам абсолютно [color=red]ЗАПРЕЩЕНО[/color] помнить, говорить, имя, внешность и так далее своего преведущего персонажа.
+
+ghost-role-information-contractor-name = Контрактник Синдиката
+ghost-role-information-contractor-token = Контрактник Синдиката (Токен)
 ghost-role-information-contractor-description = ПОЛУЧИ БЛЯ... ассистента..?
-contractor-role-greeting = Вы [color=#611b2b]Контрактор Синдиката[/color], охотник за головами, перед вами стоит задача вывести цели со станции живыми или мертвыми.
+contractor-role-greeting = Вы [color=#611b2b]контрактник Синдиката[/color], как охотнику за головами, вам поручено выводить цели со станции живыми или мертвыми.
