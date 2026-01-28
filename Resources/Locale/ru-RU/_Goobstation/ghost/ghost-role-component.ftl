@@ -170,3 +170,10 @@ ghost-role-information-clown-goblin-description = Ужасное существ�
 
 ghost-role-information-santa-name = Дед Мороз
 ghost-role-information-santa-description = Распространите новогоднее чудо по всей станции!
+
+ghost-role-information-slasher-token = Мясник (Токен)
+
+ghost-role-information-contractor-name = Контрактор Синдиката
+ghost-role-information-contractor-token = Контрактор Синдиката (Токен)
+ghost-role-information-contractor-description = ПОЛУЧИ БЛЯ... ассистента..?
+contractor-role-greeting = Вы [color=#611b2b]Контрактор Синдиката[/color], охотник за головами, перед вами стоит задача вывести цели со станции живыми или мертвыми.
