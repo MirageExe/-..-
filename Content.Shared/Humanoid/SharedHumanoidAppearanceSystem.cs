@@ -50,6 +50,7 @@ using Robust.Shared.GameObjects.Components.Localization;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Random;
 using Robust.Shared.Serialization.Manager;
 using Robust.Shared.Serialization.Markdown;
 using Robust.Shared.Utility;
@@ -72,6 +73,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [Dependency] private readonly IConfigurationManager _cfgManager = default!;
     [Dependency] private readonly INetManager _netManager = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private readonly IRobustRandom _random = default!; // Amour - TTS
     [Dependency] private readonly ISerializationManager _serManager = default!;
     [Dependency] private readonly HeightAdjustSystem _heightAdjust = default!; // Goobstation: port EE height/width sliders
     [Dependency] private readonly MarkingManager _markingManager = default!;
@@ -662,15 +664,40 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     #region Amour - TTS
     public void SetTTSVoice(EntityUid uid, string? voiceId)
     {
-        if (string.IsNullOrEmpty(voiceId))
-            voiceId = "Papich";
+        if (string.IsNullOrEmpty(voiceId) || !_proto.HasIndex<TTSVoicePrototype>(voiceId))
+        {
+            Sex? sex = null;
+            if (TryComp<HumanoidAppearanceComponent>(uid, out var humanoid))
+                sex = humanoid.Sex;
 
-        if (!_proto.HasIndex<TTSVoicePrototype>(voiceId))
-            voiceId = "Papich";
+            voiceId = GetRandomTtsVoiceId(sex) ?? voiceId ?? string.Empty;
+        }
+
+        if (string.IsNullOrEmpty(voiceId) || !_proto.HasIndex<TTSVoicePrototype>(voiceId))
+            return;
 
         EnsureComp<TTSComponent>(uid, out var comp);
         comp.VoicePrototypeId = voiceId;
         Dirty(uid, comp);
+    }
+
+    private string? GetRandomTtsVoiceId(Sex? sex)
+    {
+        var voices = _proto.EnumeratePrototypes<TTSVoicePrototype>()
+            .Where(v => v.RoundStart)
+            .ToList();
+
+        if (voices.Count == 0)
+            return null;
+
+        if (sex != null)
+        {
+            var matching = voices.Where(v => v.Sex == sex).ToList();
+            if (matching.Count > 0)
+                return _random.Pick(matching).ID;
+        }
+
+        return _random.Pick(voices).ID;
     }
     #endregion
     // Amour - TTS End
