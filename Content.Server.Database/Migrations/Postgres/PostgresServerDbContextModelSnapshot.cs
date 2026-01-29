@@ -1136,10 +1136,6 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text")
                         .HasColumnName("tags_flavor_text");
 
-                    b.Property<int>("Uplink")
-                        .HasColumnType("integer")
-                        .HasColumnName("uplink");
-
                     b.Property<string>("Voice")
                         .IsRequired()
                         .HasColumnType("text")
