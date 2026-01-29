@@ -312,3 +312,6 @@ config.json
 
 # IDE
 qodana.yaml
+
+# Discord Bot
+/DiscordBot/
