@@ -10,5 +10,5 @@ public sealed partial class ChangedSexComponent : Component
 {
     [ViewVariables] public Sex OldSex { get; set; } = Sex.Male;
     [ViewVariables] public Gender OldGender { get; set; } = Gender.Male;
-    [ViewVariables] public ProtoId<TTSVoicePrototype> OldVoice { get; set; } = "Geralt";
+    [ViewVariables] public ProtoId<TTSVoicePrototype> OldVoice { get; set; } = string.Empty;
 }

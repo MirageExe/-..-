@@ -105,7 +105,7 @@ public sealed class ChangeSexSurgerySystem : EntitySystem
 
         var randomVoice = voices[_random.Next(0, voices.Count)];
 
-        ttsComponent.VoicePrototypeId = randomVoice;
+        ttsComponent.VoicePrototypeId = randomVoice.ID;
         Dirty(surgeryUid, ttsComponent);
     }
 

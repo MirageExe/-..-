@@ -6,6 +6,8 @@ using Content.Client._Amour.TTS;
 using Content.Shared._Amour.TTS;
 using Content.Shared.Humanoid;
 using Robust.Client.UserInterface.Controls;
+using Robust.Shared.IoC;
+using Robust.Shared.Random;
 using System.Linq;
 
 namespace Content.Client.Lobby.UI;
@@ -94,10 +96,15 @@ public sealed partial class HumanoidProfileEditor
             .OrderBy(o => Loc.GetString(o.Name))
             .ToList();
 
-        _selectedTTSVoice = _ttsPrototypes.FirstOrDefault(v => v.ID == Profile.Voice)
-                           ?? _ttsPrototypes.FirstOrDefault();
+        _selectedTTSVoice = _ttsPrototypes.FirstOrDefault(v => v.ID == Profile.Voice);
 
-        if (_selectedTTSVoice != null)
+        if (_selectedTTSVoice == null && _ttsPrototypes.Count > 0)
+        {
+            var random = IoCManager.Resolve<IRobustRandom>();
+            _selectedTTSVoice = random.Pick(_ttsPrototypes);
+            SetTTSVoice(_selectedTTSVoice);
+        }
+        else if (_selectedTTSVoice != null)
         {
             SetTTSVoice(_selectedTTSVoice);
         }

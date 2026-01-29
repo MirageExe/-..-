@@ -166,7 +166,7 @@ namespace Content.Shared.Preferences
         public ProtoId<BarkPrototype> BarkVoice { get; set; } = SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Goob Station - Barks
 
         [DataField] // Amour - TTS
-        public ProtoId<TTSVoicePrototype> Voice { get; set; } = "Papich"; // Amour - TTS
+        public ProtoId<TTSVoicePrototype> Voice { get; set; } = string.Empty; // Amour - TTS
 
         [DataField]
         public int Age { get; set; } = 18;
