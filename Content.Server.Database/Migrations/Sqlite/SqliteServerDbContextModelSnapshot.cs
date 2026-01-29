@@ -1081,10 +1081,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("tags_flavor_text");
 
-                    b.Property<int>("Uplink")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("uplink");
-
                     b.Property<string>("Voice")
                         .IsRequired()
                         .HasColumnType("TEXT")
