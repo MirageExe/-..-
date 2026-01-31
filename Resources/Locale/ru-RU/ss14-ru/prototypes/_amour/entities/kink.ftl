@@ -18,8 +18,8 @@ ent-DildoEquine = дилдо (лошадиное)
 ent-DildoTentacle = дилдо (щупальце)
     .desc = { ent-DildoHuman.desc }
 
-ent-PinkHandcuffs = розовые наручники
-    .desc = Очень удобные, мягкие наручники для преступников со вкусом.
+ent-SoftHandcuffs = мягкие наручники
+    .desc = Очень удобные, розовые наручники для преступников со вкусом.
 
 ent-CollarCyan = голубой ошейник
     .desc = Простой ошейник голубого цвета.
