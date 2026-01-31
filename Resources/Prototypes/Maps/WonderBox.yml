@@ -29,6 +29,7 @@
             Librarian: [ 3, 3 ]
             ServiceWorker: [ 5, 5 ]
             Reporter: [ 3, 3 ]
+            RadioHost: [ 1, 1 ]
             #engineering
             ChiefEngineer: [ 1, 1 ]
             StationEngineer: [ 10, 10 ]
@@ -40,6 +41,7 @@
             Paramedic: [ 4, 4 ]
             MedicalIntern: [ 4, 4 ]
             Chemist: [ 3, 3 ]
+            Virologist: [ 1, 1 ]
             #science
             ResearchDirector: [ 1, 1 ]
             Scientist: [ 8, 8 ]
@@ -51,6 +53,7 @@
             Lawyer: [ 3, 3 ]
             SecurityCadet: [ 6, 6 ]
             Detective: [ 1, 1 ]
+            Brigmedic: [ 1, 1 ]
             #supply
             CargoTechnician: [ 6, 6 ]
             Quartermaster: [ 1, 1 ]
