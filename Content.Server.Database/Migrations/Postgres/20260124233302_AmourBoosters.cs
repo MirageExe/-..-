@@ -23,7 +23,8 @@ namespace Content.Server.Database.Migrations.Postgres
                 columns: table => new
                 {
                     player_id = table.Column<Guid>(type: "uuid", nullable: false),
-                    ooc_color = table.Column<int>(type: "integer", nullable: true)
+                    ooc_color = table.Column<int>(type: "integer", nullable: true),
+                    is_active = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false)
                 },
                 constraints: table =>
                 {

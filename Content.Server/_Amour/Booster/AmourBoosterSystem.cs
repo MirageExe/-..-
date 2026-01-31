@@ -9,9 +9,6 @@ using SysColor = System.Drawing.Color;
 
 namespace Content.Server._Amour.Booster;
 
-/// <summary>
-/// Manages booster perks like custom OOC colors.
-/// </summary>
 public sealed class AmourBoosterSystem : EntitySystem
 {
     [Dependency] private readonly IServerDbManager _db = default!;
@@ -52,19 +49,17 @@ public sealed class AmourBoosterSystem : EntitySystem
         {
             _boosterColors[session.UserId] = SysColor.FromArgb(color.Value);
         }
+        else
+        {
+            _boosterColors.Remove(session.UserId);
+        }
     }
 
-    /// <summary>
-    /// Gets the custom OOC color for a player, if they have one set.
-    /// </summary>
     public SysColor? GetOocColor(NetUserId userId)
     {
         return _boosterColors.TryGetValue(userId, out var color) ? color : null;
     }
 
-    /// <summary>
-    /// Checks if a player has a custom OOC color.
-    /// </summary>
     public bool HasCustomOocColor(NetUserId userId)
     {
         return _boosterColors.ContainsKey(userId);

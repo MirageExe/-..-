@@ -16,7 +16,8 @@ namespace Content.Server.Database.Migrations.Sqlite
                 columns: table => new
                 {
                     player_id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    ooc_color = table.Column<int>(type: "INTEGER", nullable: true)
+                    ooc_color = table.Column<int>(type: "INTEGER", nullable: true),
+                    is_active = table.Column<bool>(type: "INTEGER", nullable: false, defaultValue: false)
                 },
                 constraints: table =>
                 {
