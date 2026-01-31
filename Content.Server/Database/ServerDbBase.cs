@@ -405,7 +405,7 @@ namespace Content.Server.Database
             }
 
             var barkVoice = profile.BarkVoice ?? SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Goob Station - Barks
-            var voice = string.IsNullOrEmpty(profile.Voice) ? "Papich" : profile.Voice; // Amour - TTS
+            var voice = profile.Voice ?? string.Empty; // Amour - TTS
 
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
