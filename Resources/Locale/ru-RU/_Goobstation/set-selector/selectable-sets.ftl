@@ -144,6 +144,9 @@ selectable-set-blueshield-syringe-description =
     Содержит: взрывозащитный РПС, боевой инжектор,
     и несколько бутылочек с лекарствами.
 
+selectable-set-blueshield-Kapo-name = Капоэйра
+selectable-set-blueshield-Kapo-description = В темпе вальса, в ритме скерцо, кажется, что бьётся сердце. Иногда приходится и танцевать среди толпы противников.
+
 # Синий щит скафандры
 
 selectable-set-blueshield-hardsuit-light-name = бронированный боевой костюм
