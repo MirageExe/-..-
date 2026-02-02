@@ -395,6 +395,16 @@
     - BSOManual
 
 - type: selectableSet
+  id: BSOKapoSet
+  name: selectable-set-blueshield-Kapo-name
+  description: selectable-set-blueshield-Kapo-description
+  sprite:
+    sprite: _Goobstation/Objects/Misc/martial_arts.rsi
+    state: capoeira
+  content:
+    - BSOManual
+
+- type: selectableSet
   id: BSOChesterSet
   name: selectable-set-blueshield-chester-name
   description: selectable-set-blueshield-chester-description
