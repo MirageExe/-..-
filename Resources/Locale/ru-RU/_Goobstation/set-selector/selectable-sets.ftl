@@ -145,7 +145,9 @@ selectable-set-blueshield-syringe-description =
     и несколько бутылочек с лекарствами.
 
 selectable-set-blueshield-Kapo-name = Капоэйра
-selectable-set-blueshield-Kapo-description = В темпе вальса, в ритме скерцо, кажется, что бьётся сердце. Иногда приходится и танцевать среди толпы противников.
+selectable-set-blueshield-Kapo-description =
+    Иногда нужно и танцевать среди врагов.
+    Содержит: книгу с продвинутыми уроками ближнего боя. Электрофорез в комплект не входит.
 
 # Синий щит скафандры
 
